@@ -20,7 +20,7 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentContainerView2"
-            android:name="com.example.myapplication.ButtonImpiantiFragment"
+            android:name="com.example.myapplication.ButtonImpianti"
             android:layout_width="350dp"
             android:layout_height="200dp"
             android:layout_marginBottom="20dp"

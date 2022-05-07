@@ -1,18 +1,13 @@
 package com.example.myapplication
 
+import com.example.myapplication.databinding.FragmentHomeBinding
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-
-
 import androidx.fragment.app.Fragment
-
-
 import androidx.databinding.DataBindingUtil
 
-import com.example.myapplication.databinding.FragmentHomeBinding
 
 
 class HomeFragment: Fragment() {

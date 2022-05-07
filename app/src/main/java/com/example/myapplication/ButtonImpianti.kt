@@ -11,14 +11,14 @@ import com.example.myapplication.databinding.FragmentButtomBinding
 
 lateinit var binding_impianti : FragmentButtomBinding
 
-class ButtonImpiantiFragment : Fragment() {
+class ButtonImpianti : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container:
     ViewGroup?, savedInstanceState: Bundle?): View {
         binding_impianti = DataBindingUtil.inflate(inflater,R.layout.fragment_buttom,container,false)
         binding_impianti.textView3.text = getString(R.string.Impianti)
         binding_impianti.imageButton.setOnClickListener{
-            view?.findNavController()?.navigate(R.id.action_homeFragment_to_webCamFragment)
+            view?.findNavController()?.navigate(R.id.action_homeFragment_to_gestoreListe)
         }
         return binding_impianti.root
     }

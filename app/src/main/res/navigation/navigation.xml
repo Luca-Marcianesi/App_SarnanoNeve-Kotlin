@@ -12,9 +12,16 @@
         <action
             android:id="@+id/action_homeFragment_to_webCamFragment"
             app:destination="@id/webCamFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_gestoreListe"
+            app:destination="@id/gestoreListe" />
     </fragment>
     <fragment
         android:id="@+id/webCamFragment"
         android:name="com.example.myapplication.WebCamFragment"
         android:label="WebCamFragment" />
+    <fragment
+        android:id="@+id/gestoreListe"
+        android:name="com.example.myapplication.GestoreListe"
+        android:label="GestoreListe" />
 </navigation>
