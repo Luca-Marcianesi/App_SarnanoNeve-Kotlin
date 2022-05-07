@@ -6,9 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
 import com.example.myapplication.databinding.FragmentContainerListeBinding
-import androidx.viewpager.widget.ViewPager
+
 
 
 lateinit var binding_liste : FragmentContainerListeBinding
