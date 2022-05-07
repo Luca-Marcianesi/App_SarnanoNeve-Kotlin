@@ -7,5 +7,11 @@
     <string name="text_label_2_botBar">Servizi</string>
     <string name="text_label_3_botBar">Eventi</string>
     <string name="text_label_4_botBar">Shop</string>
-    <string name="text_label_5_botBar">Servizi</string>
+    <string name="text_label_5_botBar">Mappa</string>
+    <string name="difficolta_1">Facile</string>
+    <string name="difficolta_2">Media</string>
+    <string name="difficolta_3">Difficile</string>
+    <string name="Piste_aperte">N.di piste aperte oggi: </string>
+    <string name="Impianti_aperti">N.di impianti aperti oggi: </string>
+
 </resources>
