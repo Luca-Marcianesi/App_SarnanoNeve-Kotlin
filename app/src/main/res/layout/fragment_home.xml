@@ -9,7 +9,7 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentContainerView3"
-            android:name="com.example.myapplication.ButtonWebCam"
+            android:name="com.example.myapplication.fragmentHome.ButtonWebCam"
             android:layout_width="350dp"
             android:layout_height="200dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -20,7 +20,7 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentContainerView2"
-            android:name="com.example.myapplication.ButtonImpianti"
+            android:name="com.example.myapplication.fragmentHome.ButtonImpianti"
             android:layout_width="350dp"
             android:layout_height="200dp"
             android:layout_marginBottom="20dp"
@@ -31,7 +31,7 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentContainerView5"
-            android:name="com.example.myapplication.ButtonPiste"
+            android:name="com.example.myapplication.fragmentHome.ButtonPiste"
             android:layout_width="350dp"
             android:layout_height="200dp"
             android:layout_marginTop="20dp"
