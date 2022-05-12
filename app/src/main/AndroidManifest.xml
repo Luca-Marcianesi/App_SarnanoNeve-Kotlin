@@ -10,6 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".Shop.ShopActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Eventi.EventiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Mappa.MappaActivity"
+            android:exported="false"
+            android:label="@string/title_activity_mappa"
+            android:theme="@style/Theme.MyApplication.NoActionBar" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -36,8 +47,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
     </application>
 
 </manifest>

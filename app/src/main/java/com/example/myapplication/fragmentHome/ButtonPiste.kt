@@ -10,8 +10,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.myapplication.R
 import com.example.myapplication.databinding.FragmentButtonsBinding
-import com.example.myapplication.fragmentWebCam.binding_frag_webcam
-import com.example.myapplication.pisteImpianti.pisteImpiantiActivity
+
 
 class ButtonPiste : Fragment() {
 
