@@ -17,6 +17,7 @@ class ButtonWebCam : Fragment() {
             val binding_webcam : FragmentButtonsBinding = DataBindingUtil.inflate(inflater,
                 R.layout.fragment_buttons,container,false)
             binding_webcam.textView12.text = getString(R.string.WebCam).uppercase()
+            binding_webcam.imageView4.setImageResource(R.drawable.webcam)
             return binding_webcam.root
         }
     }
