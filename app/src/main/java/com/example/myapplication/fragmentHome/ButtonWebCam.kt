@@ -7,18 +7,16 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.myapplication.R
-import com.example.myapplication.databinding.FragmentButtomBinding
+import com.example.myapplication.databinding.FragmentButtonsBinding
 
-lateinit var binding_webcam : FragmentButtomBinding
 
-    class ButtonWebCam : Fragment() {
+class ButtonWebCam : Fragment() {
 
         override fun onCreateView(inflater: LayoutInflater, container:
         ViewGroup?, savedInstanceState: Bundle?): View {
-            binding_webcam = DataBindingUtil.inflate(inflater,
-                R.layout.fragment_buttom,container,false)
-            binding_webcam.textView3.text = getString(R.string.WebCam)
-            binding_webcam.imageButton.setImageResource(R.drawable.piste_non_t)
+            val binding_webcam : FragmentButtonsBinding = DataBindingUtil.inflate(inflater,
+                R.layout.fragment_buttons,container,false)
+            binding_webcam.textView12.text = getString(R.string.WebCam).uppercase()
             return binding_webcam.root
         }
     }

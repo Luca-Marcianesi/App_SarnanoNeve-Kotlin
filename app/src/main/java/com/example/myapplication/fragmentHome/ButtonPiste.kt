@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.myapplication.R
+import com.example.myapplication.databinding.FragmentButtonsBinding
 import com.example.myapplication.pisteImpianti.pisteImpiantiActivity
 
 class ButtonPiste : Fragment() {
@@ -17,27 +18,13 @@ class ButtonPiste : Fragment() {
         inflater: LayoutInflater, container:
         ViewGroup?, savedInstanceState: Bundle?
     ): View {
-        binding_webcam =
-            DataBindingUtil.inflate(inflater, R.layout.fragment_buttom, container, false)
-        binding_webcam.textView3.text = getString(R.string.Piste)
-        val button = binding_webcam.imageButton
-        button.setImageResource(R.drawable.piste)
+        var button : FragmentButtonsBinding=
+            DataBindingUtil.inflate(inflater, R.layout.fragment_buttons, container, false)
+        button.textView12.text = "PISTE".uppercase()
 
 
 
-        try {
-            button.setOnClickListener {
-                val intent = Intent(activity, pisteImpiantiActivity::class.java)
-                startActivity(intent)
-            }
 
-        }catch (e: Exception){
-            Log.v("errore","errore sul set nel frag")
-
-        }
-
-
-
-        return binding_webcam.root
+        return button.root
     }
 }

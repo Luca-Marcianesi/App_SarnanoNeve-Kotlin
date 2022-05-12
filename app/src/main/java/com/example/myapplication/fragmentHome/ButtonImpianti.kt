@@ -8,20 +8,17 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.myapplication.R
 import com.example.myapplication.databinding.FragmentButtomBinding
+import com.example.myapplication.databinding.FragmentButtonsBinding
 
-lateinit var binding_impianti : FragmentButtomBinding
 
 class ButtonImpianti : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container:
     ViewGroup?, savedInstanceState: Bundle?): View {
-        binding_impianti = DataBindingUtil.inflate(inflater,
-            R.layout.fragment_buttom,container,false)
-        binding_impianti.textView3.text = getString(R.string.Impianti)
-        binding_impianti.imageButton.setImageResource(R.drawable.piste_non_t)
-        binding_impianti.imageButton.setOnClickListener{
+        val binding_impianti : FragmentButtonsBinding = DataBindingUtil.inflate(inflater,
+            R.layout.fragment_buttons,container,false)
+        binding_impianti.textView12.text = getString(R.string.Impianti).uppercase()
 
-        }
         return binding_impianti.root
     }
 }
