@@ -21,6 +21,7 @@ class GestoreMeteo : Fragment() {
         ): View {
             val binding_meteo : FragmentMeteoBinding=
                 DataBindingUtil.inflate(inflater, R.layout.fragment_meteo, container, false)
+            binding_meteo.imageView2.setImageResource(R.drawable.snow)
 
 
 
