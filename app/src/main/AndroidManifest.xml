@@ -16,6 +16,9 @@
             android:name=".Eventi.EventiActivity"
             android:exported="false" />
         <activity
+            android:name=".WebCam.WebCamFragment"
+            android:exported="false" />
+        <activity
             android:name=".Mappa.MappaActivity"
             android:exported="false"
             android:label="@string/title_activity_mappa"

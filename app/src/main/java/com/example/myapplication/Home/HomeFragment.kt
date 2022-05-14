@@ -1,4 +1,4 @@
-package com.example.myapplication.fragmentHome
+package com.example.myapplication.Home
 
 import com.example.myapplication.databinding.FragmentHomeBinding
 import android.os.Bundle

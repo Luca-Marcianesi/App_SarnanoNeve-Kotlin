@@ -1,8 +1,6 @@
-package com.example.myapplication.fragmentHome
+package com.example.myapplication.Home
 
-import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,10 +16,12 @@ class ButtonPiste : Fragment() {
         inflater: LayoutInflater, container:
         ViewGroup?, savedInstanceState: Bundle?
     ): View {
-        var button : FragmentButtonsBinding=
+        val button : FragmentButtonsBinding=
             DataBindingUtil.inflate(inflater, R.layout.fragment_buttons, container, false)
         button.textView12.text = "PISTE".uppercase()
         button.imageView4.setImageResource(R.drawable.alpine)
+
+
 
 
 

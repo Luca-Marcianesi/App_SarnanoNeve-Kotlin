@@ -1,4 +1,4 @@
-package com.example.myapplication.fragmentHome
+package com.example.myapplication.Home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.myapplication.R
-import com.example.myapplication.databinding.FragmentButtomBinding
 import com.example.myapplication.databinding.FragmentButtonsBinding
 
 

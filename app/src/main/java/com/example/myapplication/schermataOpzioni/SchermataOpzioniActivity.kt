@@ -9,9 +9,11 @@ import com.example.myapplication.MainActivity
 import com.example.myapplication.R
 import com.google.android.material.appbar.MaterialToolbar
 
-lateinit var arrayInfo: ArrayList<InfoClass>
+
 
 class SchermataOpzioniActivity : AppCompatActivity() {
+    lateinit var arrayInfo: ArrayList<InfoClass>
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.layout_schermata_opzioni)

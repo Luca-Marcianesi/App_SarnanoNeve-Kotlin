@@ -54,8 +54,8 @@
             app:srcCompat="@drawable/apertura_impianti_sarnano_sassotetto_2018_2019" />
 
         <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/fragmentContainerView"
-            android:name="com.example.myapplication.fragmentHome.ButtonWebCam"
+            android:id="@+id/fragmentContainer_firtsButton"
+            android:name="com.example.myapplication.Home.ButtonWebCam"
             android:layout_width="100dp"
             android:layout_height="120dp"
             android:layout_marginTop="50dp"
@@ -65,41 +65,39 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
         <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/fragmentContainerView6"
-            android:name="com.example.myapplication.fragmentHome.ButtonImpianti"
+            android:id="@+id/fragmentContainer_secondButton"
+            android:name="com.example.myapplication.Home.ButtonImpianti"
             android:layout_width="100dp"
             android:layout_height="120dp"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="50dp"
-            android:layout_marginEnd="30dp"
-            app:layout_constraintEnd_toStartOf="@+id/fragmentContainerView"
+            app:layout_constraintEnd_toStartOf="@+id/fragmentContainer_firtsButton"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
         <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/fragmentContainerView7"
-            android:name="com.example.myapplication.fragmentHome.ButtonPiste"
+            android:id="@+id/fragmentContainer_thirdButton"
+            android:name="com.example.myapplication.Home.ButtonPiste"
             android:layout_width="100dp"
             android:layout_height="120dp"
-            android:layout_marginStart="30dp"
             android:layout_marginTop="50dp"
-            android:layout_marginEnd="30dp"
+            android:layout_marginEnd="10dp"
             android:outlineAmbientShadowColor="@color/blue"
             android:outlineSpotShadowColor="@color/blue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.467"
-            app:layout_constraintStart_toEndOf="@+id/fragmentContainerView"
+            app:layout_constraintStart_toEndOf="@+id/fragmentContainer_firtsButton"
             app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentContainerView8"
-            android:name="com.example.myapplication.fragmentHome.GestoreMeteo"
+            android:name="com.example.myapplication.Home.GestoreMeteo"
             android:layout_width="325dp"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView" />
+            app:layout_constraintTop_toBottomOf="@+id/fragmentContainer_firtsButton" />
 
 
         <!-- Fragment con i 3 bottoni -->
