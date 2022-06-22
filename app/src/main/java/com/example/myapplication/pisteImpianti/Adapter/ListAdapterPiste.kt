@@ -10,9 +10,10 @@ import android.widget.TextView
 import com.example.myapplication.R
 import com.example.myapplication.pisteImpianti.Data.ImpiantiData
 import com.example.myapplication.pisteImpianti.Data.PisteData
+import com.example.myapplication.pisteImpianti.Data.PisteView
 
-class ListAdapterPiste(val context: Activity, val list: ArrayList<PisteData>) :
-    ArrayAdapter<PisteData>(context, R.layout.layout_item_piste, list) {
+class ListAdapterPiste(val context: Activity, val list: ArrayList<PisteView>) :
+    ArrayAdapter<PisteView>(context, R.layout.layout_item_piste, list) {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
 
@@ -26,10 +27,12 @@ class ListAdapterPiste(val context: Activity, val list: ArrayList<PisteData>) :
         val numero = view.findViewById<TextView>(R.id.numero_pista)
 
         image.setImageResource(list[position].image)
-        nome.text = list[position].name
+        nome.text = list[position].nome
         stato.text = list[position].stato
-        numero.text = list[position].numero_pista
+        numero.text = list[position].numero.toString()
 
         return view
     }
+
+
 }

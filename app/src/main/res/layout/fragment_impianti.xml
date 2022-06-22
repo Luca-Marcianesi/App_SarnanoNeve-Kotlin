@@ -24,7 +24,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/textChiuso"
         app:layout_constraintEnd_toStartOf="@+id/textChiuso"
         app:layout_constraintTop_toTopOf="@+id/textChiuso"
-        app:srcCompat="@drawable/pista_mesia" />
+        app:srcCompat="@drawable/pista_media" />
 
     <TextView
         android:id="@+id/titolo_impianti"

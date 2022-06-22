@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "909969218772",
+    "firebase_url": "https://sarnano-ee585-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "sarnano-ee585",
+    "storage_bucket": "sarnano-ee585.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:909969218772:android:1b6cb0568c40d111f76f41",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "909969218772-3dhg95fcj2f1ag05fs7eu0srundg96s3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9cqrAxSji9vmqhRvFTnNTzI0LC04zOVw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "909969218772-3dhg95fcj2f1ag05fs7eu0srundg96s3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

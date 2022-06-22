@@ -12,6 +12,7 @@ import com.example.myapplication.Mappa.MappaActivity
 import com.example.myapplication.Shop.ShopActivity
 import com.example.myapplication.WebCam.WebCamFragment
 import com.example.myapplication.databinding.ActivityMainBinding
+import com.example.myapplication.pisteImpianti.ViewModel.viewModelPiste
 import com.example.myapplication.pisteImpianti.pisteImpiantiActivity
 import com.example.myapplication.schermataOpzioni.SchermataOpzioniActivity
 import com.google.android.material.appbar.MaterialToolbar

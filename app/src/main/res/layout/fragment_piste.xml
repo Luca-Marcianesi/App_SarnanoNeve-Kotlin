@@ -35,7 +35,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/difficoltà_2"
         app:layout_constraintEnd_toStartOf="@+id/difficoltà_2"
         app:layout_constraintTop_toTopOf="@+id/difficoltà_2"
-        app:srcCompat="@drawable/pista_mesia" />
+        app:srcCompat="@drawable/pista_media" />
 
     <TextView
         android:id="@+id/difficoltà_1"

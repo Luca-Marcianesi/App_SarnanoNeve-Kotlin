@@ -16,7 +16,7 @@ class pisteImpiantiActivity : AppCompatActivity() {
         val tabLayout: TabLayout = findViewById(R.id.TabLayout)
         val viewPager = findViewById<ViewPager2>(R.id.viewPager)
 
-        val adapter = AdapterTabLayout(supportFragmentManager, lifecycle)
+        val adapter = AdapterTabLayout(supportFragmentManager, lifecycle,application)
 
 
 
