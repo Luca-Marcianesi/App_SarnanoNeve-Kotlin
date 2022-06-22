@@ -1,19 +1,38 @@
 package com.example.myapplication.pisteImpianti
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.viewpager2.widget.ViewPager2
 import com.example.myapplication.R
+import com.example.myapplication.pisteImpianti.Adapter.AdapterTabLayout
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 
 class pisteImpiantiActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        try {
-            setContentView(R.layout.fragment_info_liste_piste)
-        }catch (e: Exception){
-            Log.v("errore ","pisteImpanti")
 
-        }
+        setContentView(R.layout.fragment_container_liste)
+        val tabLayout: TabLayout = findViewById(R.id.TabLayout)
+        val viewPager = findViewById<ViewPager2>(R.id.viewPager)
+
+        val adapter = AdapterTabLayout(supportFragmentManager, lifecycle,application)
+
+
+
+        viewPager.adapter = adapter
+        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+            when (position) {
+                0 -> {
+                    tab.text = getString(R.string.Impianti)
+                }
+                1 -> {
+                    tab.text = getString(R.string.Piste)
+                }
+            }
+        }.attach()
+
 
     }
+
 }

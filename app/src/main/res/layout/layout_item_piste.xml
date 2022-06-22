@@ -1,46 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:id="@+id/image_difficolta_pista"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginStart="20dp"
+        android:scaleType="fitCenter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/pista_facile" />
 
     <TextView
-        android:id="@+id/number"
+        android:id="@+id/numero_pista"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/image_difficolta_pista"
+        app:layout_constraintEnd_toEndOf="@+id/image_difficolta_pista"
+        app:layout_constraintStart_toStartOf="@+id/image_difficolta_pista"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
-
-    <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/nome_pista"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="@+id/number"
-        app:layout_constraintEnd_toEndOf="@+id/textView9"
-        app:layout_constraintStart_toEndOf="@+id/number"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        android:textColor="@color/blue"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/image_difficolta_pista"
+        app:layout_constraintTop_toTopOf="@+id/image_difficolta_pista" />
+
+    <TextView
+        android:id="@+id/stato_pista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        android:textColor="#F44336"
+        android:textSize="11sp"
+        app:layout_constraintStart_toEndOf="@+id/image_difficolta_pista"
+        app:layout_constraintTop_toBottomOf="@+id/nome_pista" />
 </androidx.constraintlayout.widget.ConstraintLayout>
