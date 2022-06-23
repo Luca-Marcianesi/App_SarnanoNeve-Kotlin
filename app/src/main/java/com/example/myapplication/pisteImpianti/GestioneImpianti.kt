@@ -1,23 +1,27 @@
 package com.example.myapplication.pisteImpianti
 
+import android.app.Application
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.R
 import com.example.myapplication.databinding.FragmentImpiantiBinding
 import com.example.myapplication.pisteImpianti.Adapter.ListAdapterImpianti
+import com.example.myapplication.pisteImpianti.Adapter.ListAdapterPiste
 import com.example.myapplication.pisteImpianti.Data.ImpiantiData
+import com.example.myapplication.pisteImpianti.ViewModel.viewModelImpianti
+import com.example.myapplication.pisteImpianti.ViewModel.viewModelPiste
 import com.example.myapplication.schermataOpzioni.InfoClass
 import com.example.myapplication.schermataOpzioni.ListAdapter
 
 
-class GestioneImpianti : Fragment() {
+class GestioneImpianti(var application: Application) : Fragment() {
 
-lateinit var arrayImpianti : ArrayList<ImpiantiData>
-lateinit var binding_impianti : FragmentImpiantiBinding
+    lateinit var binding_impianti: FragmentImpiantiBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,44 +29,20 @@ lateinit var binding_impianti : FragmentImpiantiBinding
         savedInstanceState: Bundle?
     ): View {
 
-        binding_impianti = DataBindingUtil.inflate(inflater, R.layout.fragment_impianti,container,false)
+        binding_impianti =
+            DataBindingUtil.inflate(inflater, R.layout.fragment_impianti, container, false)
+
+        val viewModel = ViewModelProvider(
+            this,
+            ViewModelProvider.AndroidViewModelFactory.getInstance(application)
+        ).get(viewModelImpianti::class.java)
 
 
+        binding_impianti.titoloImpianti.text = getString(R.string.InfoImpianti)
 
-        val arrayImmagini = intArrayOf(
-            R.drawable.ic_baseline_calendar_today_24,
-            R.drawable.ic_baseline_calendar_today_24,
-            R.drawable.ic_baseline_calendar_today_24,
-            R.drawable.ic_baseline_calendar_today_24,
-            R.drawable.ic_baseline_calendar_today_24,
-            R.drawable.ic_baseline_calendar_today_24,
-        )
-
-        val arrayNome = arrayOf(
-            getString(R.string.Impianti),
-            getString(R.string.Impianti),
-            getString(R.string.Impianti),
-            getString(R.string.Impianti),
-            getString(R.string.Impianti),
-            getString(R.string.Impianti)
-        )
-        val arrayStato = arrayOf(
-            getString(R.string.Impianti),
-            getString(R.string.Impianti),
-            getString(R.string.Impianti),
-            getString(R.string.Impianti),
-            getString(R.string.Impianti),
-            getString(R.string.Impianti)
-        )
-
-        arrayImpianti = ArrayList()
-
-        for (i in arrayImmagini.indices) {
-            val impianto = ImpiantiData(arrayImmagini[i], arrayNome[i],arrayStato[i])
-            arrayImpianti.add(impianto)
-        }
-        binding_impianti.listImpianti.isClickable = true
-        binding_impianti.listImpianti.adapter = ListAdapterImpianti(this.requireActivity(), arrayImpianti)
+        binding_impianti.listImpianti.adapter =
+            ListAdapterImpianti(this.requireActivity(), viewModel.listaImpianti)
+        binding_impianti.numeroImpianti.text = viewModel.getImpiantiAperti()
 
         return binding_impianti.root
     }

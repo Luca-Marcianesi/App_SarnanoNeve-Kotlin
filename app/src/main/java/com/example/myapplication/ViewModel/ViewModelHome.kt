@@ -15,7 +15,7 @@ class ViewModelHome : ViewModel() {
     val condition: LiveData<String>
         get() = _condition
 
-    private val _image = MutableLiveData<Int>(R.drawable.skii_lift)
+    private val _image = MutableLiveData<Int>(R.drawable.snow)
     val image: LiveData<Int>
         get() = _image
 

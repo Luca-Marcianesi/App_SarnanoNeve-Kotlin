@@ -17,7 +17,7 @@ class AdapterTabLayout(fragManager: FragmentManager, lifecycle: Lifecycle,var ap
     override fun createFragment(position: Int,): Fragment {
         return when (position) {
             0 -> {
-                GestioneImpianti()
+                GestioneImpianti(application)
             }
             1 -> {
                 GestionePiste(application)
