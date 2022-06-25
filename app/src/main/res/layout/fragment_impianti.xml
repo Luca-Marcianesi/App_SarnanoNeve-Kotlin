@@ -49,16 +49,6 @@
         app:layout_constraintStart_toEndOf="@+id/text_info_impianti"
         app:layout_constraintTop_toTopOf="@+id/text_info_impianti" />
 
-    <ListView
-        android:id="@+id/list_impianti"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numero_impianti" />
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="20dp"
@@ -69,5 +59,58 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/titolo_impianti"
         app:srcCompat="@drawable/ic_baseline_access_time_24" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numero_impianti">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nome_comprensorio1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue"
+                android:textSize="16dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <ListView
+                android:id="@+id/comprensorio1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </ListView>
+
+            <TextView
+                android:id="@+id/nome_comprensorio2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue"
+                android:textSize="16dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <ListView
+                android:id="@+id/comprensorio2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </ListView>
+
+        </LinearLayout>
+
+
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

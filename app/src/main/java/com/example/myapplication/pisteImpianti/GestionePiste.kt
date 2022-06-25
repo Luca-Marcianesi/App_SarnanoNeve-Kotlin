@@ -32,11 +32,18 @@ class GestionePiste(var application: Application) : Fragment() {
         val viewModel = ViewModelProvider(this,
             ViewModelProvider.AndroidViewModelFactory.getInstance(application)).get(viewModelPiste::class.java)
 
-
-
-
-        binding_piste.listPiste.adapter = ListAdapterPiste(this.requireActivity(), viewModel.listaPisteAdattata)
         binding_piste.nPisteAperte.text = viewModel.getPisteAperte()
+
+        binding_piste.nomeComprensorio1.text = getString(R.string.sassotetto)
+        binding_piste.comprensorio1.adapter = ListAdapterPiste(this.requireActivity(), viewModel.listaPisteSassotettoAdattata)
+
+        binding_piste.nomeComprensorio2.text = getString(R.string.maddalena)
+        binding_piste.comprensorio2.adapter = ListAdapterPiste(this.requireActivity(), viewModel.listaPisteMaddalenaAdattata)
+
+
+        // listHelper evita il collassamento delle due liste
+        ListHelper.getListViewSize(binding_piste.comprensorio1)
+        ListHelper.getListViewSize(binding_piste.comprensorio2)
 
         return binding_piste.root
     }

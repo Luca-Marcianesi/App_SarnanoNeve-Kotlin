@@ -40,9 +40,22 @@ class GestioneImpianti(var application: Application) : Fragment() {
 
         binding_impianti.titoloImpianti.text = getString(R.string.InfoImpianti)
 
-        binding_impianti.listImpianti.adapter =
-            ListAdapterImpianti(this.requireActivity(), viewModel.listaImpianti)
+        binding_impianti.nomeComprensorio1.text = getString(R.string.sassotetto)
+
+        binding_impianti.comprensorio1.adapter =
+            ListAdapterImpianti(this.requireActivity(), viewModel.listaImpiantiSassotetto)
+
+        binding_impianti.nomeComprensorio2.text = getString(R.string.maddalena)
+
+        binding_impianti.comprensorio2.adapter =
+            ListAdapterImpianti(this.requireActivity(), viewModel.listaImpiantiMaddalena)
+
         binding_impianti.numeroImpianti.text = viewModel.getImpiantiAperti()
+
+        // listHelper evita il collassamento delle due liste
+
+        ListHelper.getListViewSize(binding_impianti.comprensorio1)
+        ListHelper.getListViewSize(binding_impianti.comprensorio2)
 
         return binding_impianti.root
     }

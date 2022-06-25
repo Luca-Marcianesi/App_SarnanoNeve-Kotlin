@@ -9,6 +9,8 @@
     <string name="text_label_3_botBar">Eventi</string>
     <string name="text_label_4_botBar">Shop</string>
     <string name="text_label_5_botBar">Mappa</string>
+    <string name="sassotetto">Sassotetto</string>
+    <string name="maddalena">Maddalena</string>
     <string name="difficolta_1">Facile</string>
     <string name="difficolta_2">Media</string>
     <string name="difficolta_3">Difficile</string>
@@ -21,7 +23,8 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="webcam">https://www.youtube.com/watch?v=_aVnQkdkGIE</string>
+
+
 
 </resources>

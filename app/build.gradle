@@ -73,5 +73,9 @@ dependencies {
     // Test helpers
     testImplementation "androidx.room:room-testing:2.4.2"
 
+    //volley per connettere a openweather
+    implementation 'com.android.volley:volley:1.2.1'
+
+
 
 }

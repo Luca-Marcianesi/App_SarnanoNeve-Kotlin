@@ -10,11 +10,15 @@ import com.example.myapplication.pisteImpianti.db.SarnanoNeveDB
 class viewModelPiste(application: Application) : AndroidViewModel(application) {
 
     val listaPisteAdattata: ArrayList<PisteView> = ArrayList()
+    val listaPisteSassotettoAdattata: ArrayList<PisteView> = ArrayList()
+    val listaPisteMaddalenaAdattata: ArrayList<PisteView> = ArrayList()
 
     private val dao = SarnanoNeveDB.getInstance(application).pistaDao()
 
     init {
         adatta()
+        adatta_maddalena()
+        adatta_sassotetto()
     }
 
     fun getPisteAperte(): String{
@@ -48,6 +52,31 @@ class viewModelPiste(application: Application) : AndroidViewModel(application) {
             val pistaAdattata =
                 PisteView(immagine, pista_da_adattare.nome, pista_da_adattare.numero, stato)
             listaPisteAdattata.add(pistaAdattata)
+        }
+
+    }
+
+    private fun adatta_maddalena() {
+        val lista_piste = dao.getAllPisteMaddalena()
+        for (pista_da_adattare in lista_piste) {
+            val immagine = immagine_difficolta(pista_da_adattare.difficolta)
+            val stato = adatta_stato(pista_da_adattare.stato)
+            val pistaAdattata =
+                PisteView(immagine, pista_da_adattare.nome, pista_da_adattare.numero, stato)
+            listaPisteMaddalenaAdattata.add(pistaAdattata)
+        }
+
+    }
+
+
+    private fun adatta_sassotetto() {
+        val lista_piste = dao.getAllPisteSassotetto()
+        for (pista_da_adattare in lista_piste) {
+            val immagine = immagine_difficolta(pista_da_adattare.difficolta)
+            val stato = adatta_stato(pista_da_adattare.stato)
+            val pistaAdattata =
+                PisteView(immagine, pista_da_adattare.nome, pista_da_adattare.numero, stato)
+            listaPisteSassotettoAdattata.add(pistaAdattata)
         }
 
     }

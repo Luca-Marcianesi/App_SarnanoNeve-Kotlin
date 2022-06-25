@@ -1,27 +1,11 @@
 package com.example.myapplication.ViewModel
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
+import android.provider.ContactsContract.CommonDataKinds.Website.URL
+import android.util.Log
 import androidx.lifecycle.ViewModel
-import com.example.myapplication.R
+import org.json.JSONObject
+import java.net.URL
 
 class ViewModelHome : ViewModel() {
-
-    private val _temp = MutableLiveData<String>("temp")
-    val temp: LiveData<String>
-        get() = _temp
-
-    private val _condition = MutableLiveData<String>("temp")
-    val condition: LiveData<String>
-        get() = _condition
-
-    private val _image = MutableLiveData<Int>(R.drawable.snow)
-    val image: LiveData<Int>
-        get() = _image
-
-
-    fun setMeteo(){
-        _temp.value = "prova"
-    }
 
 }
