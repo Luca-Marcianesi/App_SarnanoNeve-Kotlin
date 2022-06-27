@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.fragment.app.FragmentContainer
 import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.Eventi.EventiActivity
+import com.example.myapplication.GestioneComponenti.BottomBar
 import com.example.myapplication.Mappa.MappaActivity
 import com.example.myapplication.Opzioni.SceltaOpzione
 import com.example.myapplication.Shop.ShopActivity
@@ -52,31 +53,13 @@ class MainActivity : AppCompatActivity() {
 
         bottomNavigationView.setOnItemSelectedListener {
 
-            when (it.itemId) {
-                R.id.home -> {
-                    return@setOnItemSelectedListener true
-                }
-                R.id.shop -> {
-                    val intent = Intent(this, ShopActivity::class.java)
-                    startActivity(intent)
-                    return@setOnItemSelectedListener true
-                }
-                R.id.eventi -> {
-                    val intent = Intent(this, EventiActivity::class.java)
-                    startActivity(intent)
-                    return@setOnItemSelectedListener true
-                }
-                R.id.mappa -> {
-                    val intent = Intent(this, MappaActivity::class.java)
-                    startActivity(intent)
-                    return@setOnItemSelectedListener true
-                }
+            if (bottomNavigationView.selectedItemId == it.itemId) return@setOnItemSelectedListener true
+            else {
+                startActivity(BottomBar().getIntent(this, it.itemId))
+                finish()
+                return@setOnItemSelectedListener true
             }
-
-            return@setOnItemSelectedListener true
         }
-
-
     }
 
     private fun setUpButtons() {
