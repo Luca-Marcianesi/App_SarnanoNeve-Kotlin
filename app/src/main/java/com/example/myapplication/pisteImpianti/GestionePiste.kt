@@ -2,14 +2,11 @@ package com.example.myapplication.pisteImpianti
 
 import android.app.Application
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.R
 
@@ -17,12 +14,10 @@ import com.example.myapplication.databinding.FragmentPisteBinding
 
 import com.example.myapplication.pisteImpianti.Adapter.ListAdapterPiste
 
-import com.example.myapplication.pisteImpianti.Data.PisteData
 import com.example.myapplication.pisteImpianti.ViewModel.viewModelPiste
 
 class GestionePiste(var application: Application) : Fragment() {
 
-    lateinit var arrayPiste: ArrayList<PisteData>
     lateinit var binding_piste: FragmentPisteBinding
 
 
@@ -37,13 +32,18 @@ class GestionePiste(var application: Application) : Fragment() {
         val viewModel = ViewModelProvider(this,
             ViewModelProvider.AndroidViewModelFactory.getInstance(application)).get(viewModelPiste::class.java)
 
+        binding_piste.nPisteAperte.text = viewModel.getPisteAperte()
 
-        viewModel.adatta()
+        binding_piste.nomeComprensorio1.text = getString(R.string.sassotetto)
+        binding_piste.comprensorio1.adapter = ListAdapterPiste(this.requireActivity(), viewModel.listaPisteSassotettoAdattata)
 
-        binding_piste.listPiste.adapter = ListAdapterPiste(this.requireActivity(), viewModel.listaPisteAdattata)
-        arrayPiste = ArrayList()
+        binding_piste.nomeComprensorio2.text = getString(R.string.maddalena)
+        binding_piste.comprensorio2.adapter = ListAdapterPiste(this.requireActivity(), viewModel.listaPisteMaddalenaAdattata)
 
-        binding_piste.listPiste.isClickable = true
+
+        // listHelper evita il collassamento delle due liste
+        ListHelper.getListViewSize(binding_piste.comprensorio1)
+        ListHelper.getListViewSize(binding_piste.comprensorio2)
 
         return binding_piste.root
     }

@@ -1,130 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="204dp" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/difficoltà_2"
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/difficolta_2"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titolo_piste" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="204dp" />
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginEnd="20dp"
-        android:scaleType="center"
-        app:layout_constraintBottom_toBottomOf="@+id/difficoltà_2"
-        app:layout_constraintEnd_toStartOf="@+id/difficoltà_2"
-        app:layout_constraintTop_toTopOf="@+id/difficoltà_2"
-        app:srcCompat="@drawable/pista_media" />
+        <TextView
+            android:id="@+id/difficoltà_2"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/difficolta_2"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/difficoltà_1"
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:text="@string/difficolta_1"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/difficoltà_2"
-        app:layout_constraintEnd_toStartOf="@+id/difficoltà_2"
-        app:layout_constraintHorizontal_bias="0.445"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/difficoltà_2" />
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="20dp"
+            android:scaleType="center"
+            app:layout_constraintBottom_toBottomOf="@+id/difficoltà_2"
+            app:layout_constraintEnd_toStartOf="@+id/difficoltà_2"
+            app:layout_constraintTop_toTopOf="@+id/difficoltà_2"
+            app:srcCompat="@drawable/pista_rossa" />
 
-    <TextView
-        android:id="@+id/difficoltà_3"
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:text="@string/difficolta_3"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/difficoltà_2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.652"
-        app:layout_constraintStart_toEndOf="@+id/difficoltà_2"
-        app:layout_constraintTop_toTopOf="@+id/difficoltà_2" />
+        <TextView
+            android:id="@+id/difficoltà_1"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="@string/difficolta_1"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/difficoltà_2"
+            app:layout_constraintEnd_toStartOf="@+id/difficoltà_2"
+            app:layout_constraintHorizontal_bias="0.445"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/difficoltà_2" />
 
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginEnd="16dp"
-        android:scaleType="center"
-        app:layout_constraintBottom_toBottomOf="@+id/difficoltà_3"
-        app:layout_constraintEnd_toStartOf="@+id/difficoltà_3"
-        app:layout_constraintTop_toTopOf="@+id/difficoltà_3"
-        app:srcCompat="@drawable/pista_difficile" />
+        <TextView
+            android:id="@+id/difficoltà_3"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="@string/difficolta_3"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/difficoltà_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.652"
+            app:layout_constraintStart_toEndOf="@+id/difficoltà_2"
+            app:layout_constraintTop_toTopOf="@+id/difficoltà_2" />
 
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginEnd="20dp"
-        android:scaleType="center"
-        app:layout_constraintBottom_toBottomOf="@+id/difficoltà_1"
-        app:layout_constraintEnd_toStartOf="@+id/difficoltà_1"
-        app:layout_constraintTop_toTopOf="@+id/difficoltà_1"
-        app:srcCompat="@drawable/pista_facile" />
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="16dp"
+            android:scaleType="center"
+            app:layout_constraintBottom_toBottomOf="@+id/difficoltà_3"
+            app:layout_constraintEnd_toStartOf="@+id/difficoltà_3"
+            app:layout_constraintTop_toTopOf="@+id/difficoltà_3"
+            app:srcCompat="@drawable/pista_nera" />
 
-    <TextView
-        android:id="@+id/text_info_piste"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="@string/Piste_aperte"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/n_piste_aperte"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/n_piste_aperte" />
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="20dp"
+            android:scaleType="center"
+            app:layout_constraintBottom_toBottomOf="@+id/difficoltà_1"
+            app:layout_constraintEnd_toStartOf="@+id/difficoltà_1"
+            app:layout_constraintTop_toTopOf="@+id/difficoltà_1"
+            app:srcCompat="@drawable/pista_blu" />
 
-    <TextView
-        android:id="@+id/n_piste_aperte"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="35dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/text_info_piste"
-        app:layout_constraintTop_toBottomOf="@+id/difficoltà_2" />
+        <TextView
+            android:id="@+id/text_info_piste"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/Piste_aperte"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/n_piste_aperte"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/n_piste_aperte" />
 
-    <TextView
-        android:id="@+id/titolo_piste"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/n_piste_aperte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="35dp"
+            android:text="0"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/text_info_piste"
+            app:layout_constraintTop_toBottomOf="@+id/difficoltà_2" />
 
-    <ListView
-        android:id="@+id/list_piste"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/n_piste_aperte" />
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/n_piste_aperte">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nome_comprensorio1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue"
+                    android:textSize="16dp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <ListView
+                    android:id="@+id/comprensorio1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </ListView>
+
+                <TextView
+                    android:id="@+id/nome_comprensorio2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue"
+                    android:textSize="16dp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <ListView
+                    android:id="@+id/comprensorio2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </ListView>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

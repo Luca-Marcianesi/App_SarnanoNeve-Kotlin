@@ -9,5 +9,5 @@ data class Impianto (
 val numero: Int,
 val nome: String,
 val tipo: String,
-val stato: Boolean,
+val stato: Int,
 )

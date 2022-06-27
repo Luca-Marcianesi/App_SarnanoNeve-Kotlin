@@ -1,27 +1,39 @@
 package com.example.myapplication.ViewModel
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
+import android.provider.ContactsContract.CommonDataKinds.Website.URL
+import android.util.Log
 import androidx.lifecycle.ViewModel
-import com.example.myapplication.R
+import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
+import org.json.JSONObject
+import java.net.URL
 
 class ViewModelHome : ViewModel() {
 
-    private val _temp = MutableLiveData<String>("temp")
-    val temp: LiveData<String>
-        get() = _temp
+    val url = "https://api.openweathermap.org/data/2.5/weather?q=sarnano&units=metric&appid=fab715b1276e37b8c17a87274e509451"
+    var temp : String = "100°"
 
-    private val _condition = MutableLiveData<String>("temp")
-    val condition: LiveData<String>
-        get() = _condition
+    init {
+        viewModelScope.launch {
+            getMeteoJsonfromApi()  }
 
-    private val _image = MutableLiveData<Int>(R.drawable.skii_lift)
-    val image: LiveData<Int>
-        get() = _image
+    }
 
+    private suspend fun getMeteoJsonfromApi(){
+        var response: String?
+        try {
+            response = URL(url)
+                .readText(Charsets.UTF_8)
+        } catch (e: Exception) {
+            response = null
+        }
+        val jsonObj = JSONObject(response)
+        val main = jsonObj.getJSONObject("main")
 
-    fun setMeteo(){
-        _temp.value = "prova"
+        temp = main.getString("temp") + "°C"
+        Log.e("temp",temp)
+
     }
 
 }

@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
 
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -9,21 +10,22 @@
         android:id="@+id/image_impianto"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:layout_marginStart="5dp"
         android:scaleType="fitCenter"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/numero_impianto"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/tapis_roulant" />
+        app:srcCompat="@drawable/no_results" />
 
     <TextView
         android:id="@+id/nome_impianto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="20dp"
         android:text="TextView"
-        android:textColor="#3F51B5"
+        android:textColor="@color/blue"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/image_impianto"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/image_impianto" />
 
     <TextView
         android:id="@+id/stato_impianto"
@@ -36,4 +38,17 @@
         android:textSize="11sp"
         app:layout_constraintStart_toEndOf="@+id/image_impianto"
         app:layout_constraintTop_toBottomOf="@+id/nome_impianto" />
+
+    <TextView
+        android:id="@+id/numero_impianto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="TextView"
+        android:textColor="@color/blue"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/image_impianto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/image_impianto" />
 </androidx.constraintlayout.widget.ConstraintLayout>

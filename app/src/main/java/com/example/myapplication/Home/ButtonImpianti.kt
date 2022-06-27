@@ -17,7 +17,7 @@ class ButtonImpianti : Fragment() {
         val binding_impianti : FragmentButtonsBinding = DataBindingUtil.inflate(inflater,
             R.layout.fragment_buttons,container,false)
         binding_impianti.textView12.text = getString(R.string.Impianti).uppercase()
-        binding_impianti.imageView4.setImageResource(R.drawable.skii_lift)
+        binding_impianti.imageView4.setImageResource(R.drawable.seggiovia)
 
         return binding_impianti.root
     }

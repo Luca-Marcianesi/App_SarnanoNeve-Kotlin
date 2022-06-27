@@ -6,11 +6,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.SystemClock.sleep
 import android.view.View
+import android.widget.TextView
 import androidx.fragment.app.FragmentContainer
+import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.Eventi.EventiActivity
 import com.example.myapplication.Mappa.MappaActivity
 import com.example.myapplication.Opzioni.SceltaOpzione
 import com.example.myapplication.Shop.ShopActivity
+import com.example.myapplication.ViewModel.ViewModelHome
 import com.example.myapplication.WebCam.WebCamFragment
 import com.example.myapplication.databinding.ActivityMainBinding
 import com.example.myapplication.pisteImpianti.ViewModel.viewModelPiste
@@ -31,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         setUpBottomBar()
         setUpTopBar()
         setUpButtons()
+
 
     }
 
@@ -94,21 +98,6 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-    /*
-        findViewById<BottomNavigationView>(R.id.bottomNavigationView).findViewById<>()
-
-
-            .OnNavigationItemSelectedListener { item ->
-            when(item.itemId) {
-                R.id.page_1 -> {
-                    val intent = Intent(this, SchermataOpzioniActivity::class.java)
-                    startActivity(intent)
-                    true
-                }
-
-                else -> false
-            }
-        }*/
 
 
 }
