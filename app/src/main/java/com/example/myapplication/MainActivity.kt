@@ -9,6 +9,7 @@ import android.view.View
 import androidx.fragment.app.FragmentContainer
 import com.example.myapplication.Eventi.EventiActivity
 import com.example.myapplication.Mappa.MappaActivity
+import com.example.myapplication.Opzioni.SceltaOpzione
 import com.example.myapplication.Shop.ShopActivity
 import com.example.myapplication.WebCam.WebCamFragment
 import com.example.myapplication.databinding.ActivityMainBinding
@@ -35,7 +36,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setUpTopBar() {
         findViewById<MaterialToolbar>(R.id.topAppBar).setOnClickListener {
-            val intent = Intent(this, SchermataOpzioniActivity::class.java)
+            val intent = Intent(this, SceltaOpzione::class.java)
             startActivity(intent)
         }
     }

@@ -3,6 +3,13 @@
     <string name="Piste">Piste</string>
     <string name="WebCam">WebCam</string>
     <string name="Impianti">Impianti</string>
+    <string name="Noleggio_attrezzatura">Noleggio attrezzatura</string>
+    <string name="Informazioni">Informazioni</string>
+    <string name="Scuole_scii">Scuole scii</string>
+    <string name="Parcheggio">Parcheggio</string>
+    <string name="Profilo">Profilo</string>
+    <string name="ImageText">Foto Profilo</string>
+    <string name="Soccorso_piste">Soccorso piste</string>
     <string name="text_label_1_botBar">Home</string>
     <string name="text_label_2_botBar">Servizi</string>
     <string name="text_label_3_botBar">Eventi</string>

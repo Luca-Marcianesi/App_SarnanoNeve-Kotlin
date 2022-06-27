@@ -16,15 +16,9 @@ class SchermataOpzioniActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.layout_schermata_opzioni)
-        val lista = findViewById<ListView>(R.id.listView)
+        /**val lista = findViewById<ListView>(R.id.listView)*/
 
-
-        val topbar = findViewById<MaterialToolbar>(R.id.topAppBarOpzioni)
-        topbar.setOnClickListener{
-            finishActivity(1)
-
-        }
+        /**
         val arrayImmagini = intArrayOf(
             R.drawable.ic_baseline_calendar_today_24,
             R.drawable.ic_baseline_calendar_today_24,
@@ -35,12 +29,12 @@ class SchermataOpzioniActivity : AppCompatActivity() {
         )
 
         val arrayTesto = arrayOf(
-            getString(R.string.Impianti),
-            getString(R.string.Impianti),
-            getString(R.string.Impianti),
-            getString(R.string.Impianti),
-            getString(R.string.Impianti),
-            getString(R.string.Impianti)
+            getString(R.string.Profilo),
+            getString(R.string.Scuole_scii),
+            getString(R.string.Parcheggio),
+            getString(R.string.Noleggio_attrezzatura),
+            getString(R.string.Informazioni),
+            getString(R.string.Soccorso_piste)
         )
 
         arrayInfo = ArrayList()
@@ -49,8 +43,11 @@ class SchermataOpzioniActivity : AppCompatActivity() {
             val info = InfoClass(arrayImmagini[i], arrayTesto[i])
             arrayInfo.add(info)
         }
-        lista.isClickable = true
+
+
+
         lista.adapter = ListAdapter(this, arrayInfo)
+         **/
 
     }
 }
