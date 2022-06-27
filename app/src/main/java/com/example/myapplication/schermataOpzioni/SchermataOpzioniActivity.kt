@@ -1,10 +1,13 @@
 package com.example.myapplication.schermataOpzioni
 
+import android.app.Activity
 import android.content.Intent
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.get
 import com.example.myapplication.MainActivity
 import com.example.myapplication.R
 import com.google.android.material.appbar.MaterialToolbar
@@ -12,10 +15,15 @@ import com.google.android.material.appbar.MaterialToolbar
 
 
 class SchermataOpzioniActivity : AppCompatActivity() {
-    lateinit var arrayInfo: ArrayList<InfoClass>
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val topbar = findViewById<MaterialToolbar>(R.id.topAppBarOpzioni)
+        topbar.setOnClickListener() {
+            finishActivity(1)
+            finish()
+        }
+
         /**val lista = findViewById<ListView>(R.id.listView)*/
 
         /**
