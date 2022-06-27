@@ -20,6 +20,7 @@ class GestoreMeteo : Fragment() {
 
     lateinit var binding_meteo: FragmentMeteoBinding
     val url = "https://api.openweathermap.org/data/2.5/weather?q=sarnano&units=metric&appid=fab715b1276e37b8c17a87274e509451"
+    val viewModelHome :ViewModelHome by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container:
@@ -27,6 +28,9 @@ class GestoreMeteo : Fragment() {
     ): View {
         binding_meteo =
             DataBindingUtil.inflate(inflater, R.layout.fragment_meteo, container, false)
+
+        //binding_meteo.textView11.text = viewModelHome.temp
+
         meteo().execute()
 
 
@@ -69,7 +73,7 @@ class GestoreMeteo : Fragment() {
         private fun adatta_immagine(tempo : String) : Int{
             when(tempo){
                 "Clouds"-> return R.drawable.pista_blu
-                else -> return R.drawable.pista_media
+                else -> return R.drawable.no_results
             }
         }
     }
