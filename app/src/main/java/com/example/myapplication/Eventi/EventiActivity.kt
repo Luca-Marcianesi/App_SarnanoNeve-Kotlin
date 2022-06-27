@@ -1,8 +1,11 @@
 package com.example.myapplication.Eventi
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import com.example.myapplication.GestioneComponenti.BottomBar
 import com.example.myapplication.MainActivity
 import com.example.myapplication.Mappa.MappaActivity
 import com.example.myapplication.R
@@ -22,30 +25,16 @@ class EventiActivity : AppCompatActivity() {
         bottomNavigationView.selectedItemId = R.id.eventi
 
         bottomNavigationView.setOnItemSelectedListener {
-
-            when (it.itemId) {
-                R.id.home -> {
-                    val intent = Intent(this, MainActivity::class.java)
-                    startActivity(intent)
-                    return@setOnItemSelectedListener true
-                }
-                R.id.shop -> {
-                    val intent = Intent(this, ShopActivity::class.java)
-                    startActivity(intent)
-                    return@setOnItemSelectedListener true
-                }
-                R.id.eventi -> {
-
-                    return@setOnItemSelectedListener true
-                }
-                R.id.mappa -> {
-                    val intent = Intent(this, MappaActivity::class.java)
-                    startActivity(intent)
-                    return@setOnItemSelectedListener true
-                }
+            if (bottomNavigationView.selectedItemId == it.itemId) return@setOnItemSelectedListener true
+            else {
+                startActivity(BottomBar().getIntent(this, it.itemId))
+                finish()
+                return@setOnItemSelectedListener true
             }
 
-            return@setOnItemSelectedListener true
+
         }
+
+
     }
 }

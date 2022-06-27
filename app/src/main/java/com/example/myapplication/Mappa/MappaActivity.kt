@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.myapplication.Eventi.EventiActivity
+import com.example.myapplication.GestioneComponenti.BottomBar
 import com.example.myapplication.MainActivity
 import com.example.myapplication.R
 import com.example.myapplication.Shop.ShopActivity
@@ -24,29 +25,12 @@ class MappaActivity : AppCompatActivity() {
 
         bottomNavigationView.setOnItemSelectedListener {
 
-            when (it.itemId) {
-                R.id.home -> {
-                    val intent = Intent(this, MainActivity::class.java)
-                    startActivity(intent)
-                    return@setOnItemSelectedListener true
-                }
-                R.id.shop -> {
-                    val intent = Intent(this, ShopActivity::class.java)
-                    startActivity(intent)
-                    return@setOnItemSelectedListener true
-                }
-                R.id.eventi -> {
-                    val intent = Intent(this, EventiActivity::class.java)
-                    startActivity(intent)
-                    return@setOnItemSelectedListener true
-                }
-                R.id.mappa -> {
-
-                    return@setOnItemSelectedListener true
-                }
+            if (bottomNavigationView.selectedItemId == it.itemId) return@setOnItemSelectedListener true
+            else {
+                startActivity(BottomBar().getIntent(this, it.itemId))
+                finish()
+                return@setOnItemSelectedListener true
             }
-
-            return@setOnItemSelectedListener true
         }
     }
 }
