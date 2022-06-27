@@ -14,12 +14,13 @@ import com.example.myapplication.ViewModel.ViewModelHome
 import com.example.myapplication.databinding.FragmentMeteoBinding
 import org.json.JSONObject
 import java.net.URL
+import kotlin.math.roundToInt
 
 
 class GestoreMeteo : Fragment() {
 
     lateinit var binding_meteo: FragmentMeteoBinding
-    val url = "https://api.openweathermap.org/data/2.5/weather?q=sarnano&units=metric&appid=fab715b1276e37b8c17a87274e509451"
+    val url = "https://api.openweathermap.org/data/2.5/weather?q=ancona&units=metric&appid=fab715b1276e37b8c17a87274e509451"
     val viewModelHome :ViewModelHome by viewModels()
 
     override fun onCreateView(
@@ -58,11 +59,10 @@ class GestoreMeteo : Fragment() {
                 val weather_array = jsonObj.getJSONArray("weather")
                 val weather_object = weather_array.getJSONObject(0)
                 val weather_main = weather_object.getString("main")
-
-
+                val temp : Long = main.getLong("temp")
 
                 binding_meteo.imageView2.setImageResource(adatta_immagine(weather_main))
-                binding_meteo.textView11.text = main.getString("temp") + "°C"
+                binding_meteo.textView7.text = temp.toInt().toString() + "°C"
 
             } catch (e: Exception) {
                 Log.e("eccezzione",e.toString())
@@ -72,7 +72,11 @@ class GestoreMeteo : Fragment() {
 
         private fun adatta_immagine(tempo : String) : Int{
             when(tempo){
-                "Clouds"-> return R.drawable.pista_blu
+                "Clouds"-> return R.drawable.cloud
+                "Sun"-> return R.drawable.sun
+                "Snow"-> return R.drawable.snow
+                "Rain"->return R.drawable.rain
+                "Thunder"->return R.drawable.storm
                 else -> return R.drawable.no_results
             }
         }

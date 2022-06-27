@@ -4,6 +4,9 @@
     <string name="WebCam">WebCam</string>
     <string name="Impianti">Impianti</string>
     <string name="Noleggio_attrezzatura">Noleggio attrezzatura</string>
+    <string name="InfoImpianti">Gli impianti sono aperti dalle 8:30 alle 16:30</string>
+    <string name="sassotetto">Sassotetto</string>
+    <string name="maddalena">Maddalena</string>
     <string name="Informazioni">Informazioni</string>
     <string name="Scuole_scii">Scuole scii</string>
     <string name="Parcheggio">Parcheggio</string>

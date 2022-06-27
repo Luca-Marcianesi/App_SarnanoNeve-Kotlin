@@ -22,7 +22,7 @@ class WebCamFragment: AppCompatActivity() {
         Log.w("webcamacc","si")
 
         val video = findViewById<VideoView>(R.id.videoView)
-        val uri = Uri.parse(getString(R.string.webcam))
+        val uri = Uri.parse(getString(R.string.WebCam))
         video.setVideoURI(uri)
         video.start()
     }

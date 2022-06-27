@@ -21,10 +21,10 @@ class SceltaOpzione : AppCompatActivity() {
         val listview = findViewById<ListView>(R.id.listView)
 
         val list = mutableListOf<OpzioniModel>()
-        list.add(OpzioniModel("Profilo", "Il tuo profilo", R.drawable.tapis_roulant))
-        list.add(OpzioniModel("Attrezzatura", "Visiona attrezzatura", R.drawable.tapis_roulant))
-        list.add(OpzioniModel("Parcheggio", "Prenota il parcheggio", R.drawable.tapis_roulant))
-        list.add(OpzioniModel("Scuole scii", "Esplora le scuole scii", R.drawable.tapis_roulant))
+        list.add(OpzioniModel("Profilo", "Il tuo profilo", R.drawable.tapisroulant))
+        list.add(OpzioniModel("Attrezzatura", "Visiona attrezzatura", R.drawable.tapisroulant))
+        list.add(OpzioniModel("Parcheggio", "Prenota il parcheggio", R.drawable.tapisroulant))
+        list.add(OpzioniModel("Scuole scii", "Esplora le scuole scii", R.drawable.tapisroulant))
 
         listview.adapter = OpzioniAdapter(this, R.layout.layout_opzione_singola, list)
 
