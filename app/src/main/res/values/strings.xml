@@ -24,6 +24,7 @@
     <string name="Piste_aperte">N.di piste aperte oggi: </string>
     <string name="Impianti_aperti">N.di impianti aperti oggi: </string>
     <string name="title_activity_mappa">MappaActivity</string>
+    <string name="URLwebcam">https://api.scenaridigitali.com/media/sassotetto/timelapse.mp4?d=20225217</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
