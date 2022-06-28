@@ -1,85 +1,93 @@
 package com.example.myapplication.pisteImpianti.ViewModel
 
 import android.app.Application
-import android.util.Log
 import androidx.lifecycle.AndroidViewModel
-import com.example.myapplication.R
-import com.example.myapplication.pisteImpianti.Data.PisteView
-import com.example.myapplication.pisteImpianti.db.SarnanoNeveDB
+import androidx.lifecycle.MutableLiveData
+import com.example.myapplication.pisteImpianti.db.Pista
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 class viewModelPiste(application: Application) : AndroidViewModel(application) {
 
-    val listaPisteAdattata: ArrayList<PisteView> = ArrayList()
-    val listaPisteSassotettoAdattata: ArrayList<PisteView> = ArrayList()
-    val listaPisteMaddalenaAdattata: ArrayList<PisteView> = ArrayList()
 
-    private val dao = SarnanoNeveDB.getInstance(application).pistaDao()
+    private var _pisteSassotetto : MutableLiveData<ArrayList<Pista>> = MutableLiveData()
+
+    private var _pisteMaddalena : MutableLiveData<ArrayList<Pista>> = MutableLiveData()
+
+
+    private val db_sarnanoNeve = Firebase.firestore.collection("SarnanoNeve")
+    private val doc_sassotetto = db_sarnanoNeve.document("Sassotetto")
+    private val doc_maddalena = db_sarnanoNeve.document("Maddalena")
+    private val doc_piste_sassotetto = doc_sassotetto.collection("Piste")
+    private val doc_piste_maddalena = doc_maddalena.collection("Piste")
+
+
+   internal val pisteSassotetto : MutableLiveData<ArrayList<Pista>>
+       get() {return _pisteSassotetto}
+
+    internal val pisteMaddalena : MutableLiveData<ArrayList<Pista>>
+        get() {return _pisteMaddalena}
+
 
     init {
-        adatta()
-        adatta_maddalena()
-        adatta_sassotetto()
-    }
-
-    fun getPisteAperte(): String{
-        Log.w("piste" ,dao.getNPisteAperte().toString())
-        return dao.getNPisteAperte().toString()
+        listenPisteSassotetto()
+        listenPisteMaddalena()
 
     }
 
+    private fun listenPisteSassotetto() {
+        doc_piste_sassotetto.addSnapshotListener{
+            snapshot,e ->
+            if(e != null) {
+                return@addSnapshotListener
+            }
+            if (snapshot != null){
+                val listaPiste = ArrayList<Pista>()
+                val document = snapshot.documents
+                document.forEach{
+                    val pista = it.toObject(Pista::class.java)
 
-    private fun immagine_difficolta(difficolta: String): Int {
-        return when (difficolta) {
-            "nera" -> R.drawable.pista_nera
-            "rossa" -> R.drawable.pista_rossa
-            "blu"->R.drawable.pista_blu
-            else -> R.drawable.no_results
+                    if (pista != null){
+                        pista.adatta()
+                        listaPiste.add(pista)
+                    }
+                }
+                _pisteSassotetto.value = listaPiste
+            }
+
         }
-
     }
 
-    private fun adatta_stato(stato: Int): String {
-        return if (stato == 1) "aperta"
-        else "chiusa"
-    }
+    private fun listenPisteMaddalena() {
+        doc_piste_maddalena.addSnapshotListener{
+                snapshot,e ->
+            if(e != null) {
+                return@addSnapshotListener
+            }
+            if (snapshot != null){
+                val listaPiste = ArrayList<Pista>()
+                val document = snapshot.documents
+                document.forEach{
+                    val pista = it.toObject(Pista::class.java)
 
+                    if (pista != null){
+                        pista.adatta()
+                        listaPiste.add(pista)
+                    }
+                }
+                _pisteMaddalena.value = listaPiste
+            }
 
-    private fun adatta() {
-        val lista_piste = dao.getAllPiste()
-        for (pista_da_adattare in lista_piste) {
-            val immagine = immagine_difficolta(pista_da_adattare.difficolta)
-            val stato = adatta_stato(pista_da_adattare.stato)
-            val pistaAdattata =
-                PisteView(immagine, pista_da_adattare.nome, pista_da_adattare.numero, stato)
-            listaPisteAdattata.add(pistaAdattata)
         }
-
-    }
-
-    private fun adatta_maddalena() {
-        val lista_piste = dao.getAllPisteMaddalena()
-        for (pista_da_adattare in lista_piste) {
-            val immagine = immagine_difficolta(pista_da_adattare.difficolta)
-            val stato = adatta_stato(pista_da_adattare.stato)
-            val pistaAdattata =
-                PisteView(immagine, pista_da_adattare.nome, pista_da_adattare.numero, stato)
-            listaPisteMaddalenaAdattata.add(pistaAdattata)
-        }
-
     }
 
 
-    private fun adatta_sassotetto() {
-        val lista_piste = dao.getAllPisteSassotetto()
-        for (pista_da_adattare in lista_piste) {
-            val immagine = immagine_difficolta(pista_da_adattare.difficolta)
-            val stato = adatta_stato(pista_da_adattare.stato)
-            val pistaAdattata =
-                PisteView(immagine, pista_da_adattare.nome, pista_da_adattare.numero, stato)
-            listaPisteSassotettoAdattata.add(pistaAdattata)
-        }
 
-    }
+
+
+
+
+
 
 
 }

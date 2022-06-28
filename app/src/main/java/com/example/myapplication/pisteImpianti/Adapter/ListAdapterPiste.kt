@@ -2,6 +2,7 @@ package com.example.myapplication.pisteImpianti.Adapter
 
 import android.app.Activity
 import android.graphics.Color
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,10 +10,10 @@ import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.myapplication.R
-import com.example.myapplication.pisteImpianti.Data.PisteView
+import com.example.myapplication.pisteImpianti.db.Pista
 
-class ListAdapterPiste(val context: Activity, val list: ArrayList<PisteView>) :
-    ArrayAdapter<PisteView>(context, R.layout.layout_item_piste, list) {
+class ListAdapterPiste(val context: Activity, val list: ArrayList<Pista>) :
+    ArrayAdapter<Pista>(context, R.layout.layout_item_piste, list) {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
 
@@ -25,15 +26,18 @@ class ListAdapterPiste(val context: Activity, val list: ArrayList<PisteView>) :
         val stato = view.findViewById<TextView>(R.id.stato_pista)
         val numero = view.findViewById<TextView>(R.id.numero_pista)
 
-        image.setImageResource(list[position].image)
+        image.setImageResource(list[position].immagine)
         nome.text = list[position].nome
-        stato.text = list[position].stato
-        if (list[position].stato == "aperta") stato.setTextColor(Color.GREEN)
+        stato.text = list[position].stato_pista
+        Log.w("stato",list[position].stato_pista)
+        if (list[position].stato_pista == "aperta") stato.setTextColor(Color.GREEN)
         else stato.setTextColor(Color.RED)
         numero.text = list[position].numero.toString()
 
         return view
     }
+
+
 
 
 }

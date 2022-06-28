@@ -10,13 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.R
 import com.example.myapplication.databinding.FragmentImpiantiBinding
-import com.example.myapplication.pisteImpianti.Adapter.ListAdapterImpianti
-import com.example.myapplication.pisteImpianti.Adapter.ListAdapterPiste
-import com.example.myapplication.pisteImpianti.Data.ImpiantiData
 import com.example.myapplication.pisteImpianti.ViewModel.viewModelImpianti
-import com.example.myapplication.pisteImpianti.ViewModel.viewModelPiste
-import com.example.myapplication.schermataOpzioni.InfoClass
-import com.example.myapplication.schermataOpzioni.ListAdapter
 
 
 class GestioneImpianti(var application: Application) : Fragment() {
@@ -37,7 +31,7 @@ class GestioneImpianti(var application: Application) : Fragment() {
             ViewModelProvider.AndroidViewModelFactory.getInstance(application)
         ).get(viewModelImpianti::class.java)
 
-
+/*
         binding_impianti.titoloImpianti.text = getString(R.string.InfoImpianti)
 
         binding_impianti.nomeComprensorio1.text = getString(R.string.sassotetto)
@@ -56,6 +50,8 @@ class GestioneImpianti(var application: Application) : Fragment() {
 
         ListHelper.getListViewSize(binding_impianti.comprensorio1)
         ListHelper.getListViewSize(binding_impianti.comprensorio2)
+        */
+
 
         return binding_impianti.root
     }

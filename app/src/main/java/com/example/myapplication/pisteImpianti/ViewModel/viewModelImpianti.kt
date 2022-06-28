@@ -4,9 +4,6 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import com.example.myapplication.R
 import com.example.myapplication.pisteImpianti.Data.ImpiantiView
-import com.example.myapplication.pisteImpianti.Data.PisteView
-
-import com.example.myapplication.pisteImpianti.db.SarnanoNeveDB
 
 
 class viewModelImpianti(application: Application) : AndroidViewModel(application) {
@@ -17,17 +14,13 @@ class viewModelImpianti(application: Application) : AndroidViewModel(application
 
     val listaImpiantiMaddalena: ArrayList<ImpiantiView> = ArrayList()
 
-    private val dao = SarnanoNeveDB.getInstance(application).impiantoDao()
+    //private val dao = SarnanoNeveDB.getInstance(application).impiantoDao()
 
     init {
-        adatta()
-        adatta_maddalena()
-        adatta_sassotetto()
+
     }
 
-    fun getImpiantiAperti(): String{
-        return dao.getNImpiantiAperti().toString()
-    }
+
 
 
     private fun immagine_impianto(difficolta: String): Int {
@@ -45,7 +38,7 @@ class viewModelImpianti(application: Application) : AndroidViewModel(application
         else "chiusa"
     }
 
-
+/*
     private fun adatta() {
             val lista_impianti = dao.getAllImpianti()
             for (impianto_da_adattare in lista_impianti) {
@@ -80,7 +73,7 @@ class viewModelImpianti(application: Application) : AndroidViewModel(application
             listaImpiantiMaddalena.add(impianto_adattato)
         }
 
-    }
+    }*/
 
 
 }

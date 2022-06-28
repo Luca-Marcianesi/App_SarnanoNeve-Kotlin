@@ -1,12 +1,8 @@
 package com.example.myapplication.Shop
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.myapplication.Eventi.EventiActivity
 import com.example.myapplication.GestioneComponenti.BottomBar
-import com.example.myapplication.MainActivity
-import com.example.myapplication.Mappa.MappaActivity
 import com.example.myapplication.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 

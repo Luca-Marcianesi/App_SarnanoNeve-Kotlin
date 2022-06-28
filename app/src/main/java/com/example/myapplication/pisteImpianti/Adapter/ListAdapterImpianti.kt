@@ -8,7 +8,6 @@ import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.myapplication.R
-import com.example.myapplication.pisteImpianti.Data.ImpiantiData
 import com.example.myapplication.pisteImpianti.Data.ImpiantiView
 
 class ListAdapterImpianti(val context: Activity, val list: ArrayList<ImpiantiView>) :
