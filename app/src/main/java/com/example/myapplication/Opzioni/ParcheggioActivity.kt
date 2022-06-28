@@ -5,10 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.R
 import com.google.android.material.appbar.MaterialToolbar
 
-class AttrezzaturaActivity : AppCompatActivity(){
+class ParcheggioActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_attrezzatura)
+        setContentView(R.layout.activity_parcheggio)
 
         val topbar = findViewById<MaterialToolbar>(R.id.topAppBarOpzioni)
         topbar.setNavigationOnClickListener() {

@@ -24,6 +24,7 @@
         <activity
             android:name=".Opzioni.SceltaOpzione"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.RUN" />
 
@@ -41,6 +42,42 @@
         </activity>
         <activity
             android:name=".Opzioni.AttrezzaturaActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.RUN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Opzioni.InformazioniActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.RUN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Opzioni.SoccorsoPisteActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.RUN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Opzioni.ParcheggioActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.RUN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Opzioni.ScuolaSciiActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.RUN" />

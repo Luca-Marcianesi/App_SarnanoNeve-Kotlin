@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setUpTopBar() {
-        findViewById<MaterialToolbar>(R.id.topAppBar).setOnClickListener {
+        findViewById<MaterialToolbar>(R.id.topAppBar).setNavigationOnClickListener() {
             val intent = Intent(this, SceltaOpzione::class.java)
             startActivity(intent)
         }
