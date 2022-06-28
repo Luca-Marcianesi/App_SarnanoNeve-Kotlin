@@ -63,7 +63,7 @@
                     app:srcCompat="@drawable/logo" />
 
                 <androidx.fragment.app.FragmentContainerView
-                    android:id="@+id/fragmentContainer_secondButton"
+                    android:id="@+id/fragmentContainer_ButtonImpianti"
                     android:name="com.example.myapplication.Home.ButtonImpianti"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
@@ -73,7 +73,7 @@
                      />
 
                 <androidx.fragment.app.FragmentContainerView
-                    android:id="@+id/fragmentContainer_firtsButton"
+                    android:id="@+id/fragmentContainer_ButtonWebCam"
                     android:name="com.example.myapplication.Home.ButtonWebCam"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
@@ -83,7 +83,7 @@
 
 
                 <androidx.fragment.app.FragmentContainerView
-                    android:id="@+id/fragmentContainer_thirdButton"
+                    android:id="@+id/fragmentContainer_ButtonPiste"
                     android:name="com.example.myapplication.Home.ButtonPiste"
                     android:layout_width="200dp"
                     android:layout_height="100dp"

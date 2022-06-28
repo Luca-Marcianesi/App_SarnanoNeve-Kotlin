@@ -15,8 +15,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityMainBinding
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,9 +50,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setUpButtons() {
-        val frag_1 = findViewById<View>(R.id.fragmentContainer_firtsButton)
-        val frag_2 = findViewById<View>(R.id.fragmentContainer_secondButton)
-        val frag_3 = findViewById<View>(R.id.fragmentContainer_thirdButton)
+        val frag_1 = findViewById<View>(R.id.fragmentContainer_ButtonWebCam)
+        val frag_2 = findViewById<View>(R.id.fragmentContainer_ButtonImpianti)
+        val frag_3 = findViewById<View>(R.id.fragmentContainer_ButtonPiste)
 
         frag_1.setOnClickListener {
             val intent = Intent(this, WebCamFragment::class.java)
@@ -62,10 +60,12 @@ class MainActivity : AppCompatActivity() {
         }
         frag_2.setOnClickListener {
             val intent = Intent(this, pisteImpiantiActivity::class.java)
+            intent.putExtra("richiedente",0)
             startActivity(intent)
         }
         frag_3.setOnClickListener {
             val intent = Intent(this, pisteImpiantiActivity::class.java)
+            intent.putExtra("richiedente",1)
             startActivity(intent)
         }
 

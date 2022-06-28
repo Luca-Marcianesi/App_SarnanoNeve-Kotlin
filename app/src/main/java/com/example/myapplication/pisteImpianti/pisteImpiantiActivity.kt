@@ -16,11 +16,15 @@ class pisteImpiantiActivity : AppCompatActivity() {
         val tabLayout: TabLayout = findViewById(R.id.TabLayout)
         val viewPager = findViewById<ViewPager2>(R.id.viewPager)
 
+        val richiesta : Int = intent.getIntExtra("richiedente",0)
+
         val adapter = AdapterTabLayout(supportFragmentManager, lifecycle,application)
 
 
 
         viewPager.adapter = adapter
+
+
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             when (position) {
                 0 -> {

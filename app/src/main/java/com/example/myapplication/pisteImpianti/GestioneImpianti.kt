@@ -10,12 +10,16 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.R
 import com.example.myapplication.databinding.FragmentImpiantiBinding
+import com.example.myapplication.pisteImpianti.Adapter.ListAdapterImpianti
+import com.example.myapplication.pisteImpianti.Adapter.ListAdapterPiste
 import com.example.myapplication.pisteImpianti.ViewModel.viewModelImpianti
+import com.example.myapplication.pisteImpianti.ViewModel.viewModelPiste
 
 
 class GestioneImpianti(var application: Application) : Fragment() {
 
     lateinit var binding_impianti: FragmentImpiantiBinding
+    lateinit var viewModel: viewModelImpianti
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,20 +30,21 @@ class GestioneImpianti(var application: Application) : Fragment() {
         binding_impianti =
             DataBindingUtil.inflate(inflater, R.layout.fragment_impianti, container, false)
 
-        val viewModel = ViewModelProvider(
+        viewModel = ViewModelProvider(
             this,
             ViewModelProvider.AndroidViewModelFactory.getInstance(application)
         ).get(viewModelImpianti::class.java)
 
-/*
+
         binding_impianti.titoloImpianti.text = getString(R.string.InfoImpianti)
 
         binding_impianti.nomeComprensorio1.text = getString(R.string.sassotetto)
-
+        binding_impianti.nomeComprensorio2.text = getString(R.string.maddalena)
+/*
         binding_impianti.comprensorio1.adapter =
             ListAdapterImpianti(this.requireActivity(), viewModel.listaImpiantiSassotetto)
 
-        binding_impianti.nomeComprensorio2.text = getString(R.string.maddalena)
+
 
         binding_impianti.comprensorio2.adapter =
             ListAdapterImpianti(this.requireActivity(), viewModel.listaImpiantiMaddalena)
@@ -54,5 +59,24 @@ class GestioneImpianti(var application: Application) : Fragment() {
 
 
         return binding_impianti.root
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+        viewModel.impiantiSassotetto.observe(viewLifecycleOwner) { piste ->
+            binding_impianti.comprensorio1.adapter = ListAdapterImpianti(
+                this.requireActivity(), piste
+            )
+            ListHelper.getListViewSize(binding_impianti.comprensorio1)
+
+        }
+
+        viewModel.impiantiMaddalena.observe(viewLifecycleOwner) { piste ->
+            binding_impianti.comprensorio2.adapter = ListAdapterImpianti(
+                this.requireActivity(), piste
+            )
+            ListHelper.getListViewSize(binding_impianti.comprensorio2)
+        }
     }
 }
