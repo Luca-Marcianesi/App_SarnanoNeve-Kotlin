@@ -18,6 +18,7 @@
             style="@style/Widget.MaterialComponents.Toolbar.Primary"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
+            app:title="Informazioni utili per te"
             app:menu="@menu/top_bar"
             app:navigationIcon="@drawable/ic_baseline_keyboard_backspace_24" />
 

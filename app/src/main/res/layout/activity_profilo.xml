@@ -10,11 +10,12 @@
     tools:context=".Opzioni.ProfiloActivity">
 
 
-
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.appbar.MaterialToolbar
@@ -23,33 +24,46 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:menu="@menu/top_bar"
-            app:navigationIcon="@drawable/ic_baseline_keyboard_backspace_24" />
+            app:navigationIcon="@drawable/ic_baseline_keyboard_backspace_24"
+            app:title="Il tuo profilo" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
-
     <ImageView
-        android:id="@+id/immagineutente"
+        android:id="@+id/user_image_pick"
+        android:layout_width="235dp"
+        android:layout_height="209dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/fotocamera_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
-        android:contentDescription="@string/ImageText"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginBottom="250dp"
+        android:text="Fotocamera"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/user_image_pick" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="229dp"
-        android:layout_height="71dp"
-        android:layout_marginBottom="200dp"
-        android:text="@string/Profilo"
-        android:textAlignment="center"
-        android:textSize="24sp"
+    <Button
+        android:id="@+id/galleria_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="57dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="250dp"
+        android:text="Galleria"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/immagineutente" />
+        app:layout_constraintTop_toBottomOf="@+id/user_image_pick" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
