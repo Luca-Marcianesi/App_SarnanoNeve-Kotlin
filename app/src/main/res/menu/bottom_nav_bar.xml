@@ -14,8 +14,8 @@
     <item
         android:id="@+id/shop"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_shopping_cart_24"
-        android:title="@string/text_label_4_botBar"/>
+        android:icon="@drawable/ic_baseline_wb_sunny_24"
+        android:title="@string/meteo"/>
     <item
         android:id="@+id/mappa"
         android:enabled="true"

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myapplication">
-    <uses-permission android:name="android.permission.INTERNET">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
-    </uses-permission>
+
     <application
+        android:name=".SaranoApplication"
         android:allowBackup="true"
         android:icon="@drawable/logo_piccolo_sn"
         android:label="@string/app_name"
@@ -18,7 +20,7 @@
             android:name=".Eventi.EventiActivity"
             android:exported="false" />
         <activity
-            android:name=".WebCam.GestoreWebCam"
+            android:name="com.example.myapplication.Ui.WebCam.GestoreWebCam"
             android:exported="false" />
 
         <activity
@@ -95,7 +97,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".pisteImpianti.pisteImpiantiActivity"
+            android:name="com.example.myapplication.Ui.PisteImpianti.pisteImpiantiActivity"
             android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.RUN" />

@@ -1,16 +1,20 @@
 package com.example.myapplication
 
 import android.content.Intent
-import android.net.Uri
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import com.example.myapplication.GestioneComponenti.BottomBar
 import com.example.myapplication.Opzioni.SceltaOpzione
-import com.example.myapplication.WebCam.GestoreWebCam
-import com.example.myapplication.pisteImpianti.pisteImpiantiActivity
+import com.example.myapplication.Ui.WebCam.GestoreWebCam
+import com.example.myapplication.Ui.PisteImpianti.pisteImpiantiActivity
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 
 class MainActivity : AppCompatActivity() {
@@ -22,9 +26,8 @@ class MainActivity : AppCompatActivity() {
         setUpBottomBar()
         setUpTopBar()
         setUpButtons()
-
-
     }
+
 
     private fun setUpTopBar() {
         findViewById<MaterialToolbar>(R.id.topAppBar).setNavigationOnClickListener() {
@@ -55,12 +58,6 @@ class MainActivity : AppCompatActivity() {
         val frag_3 = findViewById<View>(R.id.fragmentContainer_ButtonPiste)
 
         frag_1.setOnClickListener {
-            /*
-            val intent = Intent()
-            intent.action = Intent.ACTION_VIEW
-            intent.addCategory(Intent.CATEGORY_BROWSABLE)
-            intent.setData(Uri.parse(getString(R.string.URLwebcam)))
-            */
             val intent = Intent(this, GestoreWebCam::class.java)
             startActivity(intent)
         }
@@ -79,11 +76,3 @@ class MainActivity : AppCompatActivity() {
 
 
 }
-
-
-
-
-
-
-
-

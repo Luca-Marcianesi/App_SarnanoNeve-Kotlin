@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Shop.ShopActivity">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ombre_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/titoloMeteo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="25dp"
+                    android:paddingBottom="25dp"
+                    android:textColor="@color/white"
+                    android:textSize="30sp">
+
+                </TextView>
+
+
+                <ImageView
+                    android:id="@+id/imagineMeteo"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="25dp">
+
+                </ImageView>
+
+
+                <TextView
+                    android:id="@+id/meteoGenerale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="25dp"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="25dp"
+                    android:text="Temperarura"
+                    android:textColor="@color/black"
+                    android:textSize="28sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+
+                <TextView
+                    android:id="@+id/temperatura"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="25dp"
+                    android:background="@drawable/ombre_home"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/blue"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginStart="25dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp">
+
+                </TextView>
+
+
+                <TextView
+                    android:id="@+id/temperatureMax"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="25dp"
+                    android:background="@drawable/ombre_home"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/blue"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginStart="25dp"
+                    android:textSize="20sp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp">
+
+                </TextView>
+
+
+                <TextView
+                    android:id="@+id/temperatureMin"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="25dp"
+                    android:background="@drawable/ombre_home"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/blue"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginStart="25dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp">
+
+                </TextView>
+
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="25dp"
+                    android:text="Vento"
+                    android:textColor="@color/black"
+                    android:textSize="28sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/vento"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/ombre_home"
+                    android:textColor="@color/blue"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginStart="25dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp">
+
+                </TextView>
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="25dp"
+                    android:text="Domani"
+                    android:textColor="@color/black"
+                    android:textSize="28sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/ombre_home"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginBottom="10dp">
+
+                    <ImageView
+                        android:id="@+id/imagineDomani"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:paddingStart="10dp">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/tempDomani"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/ombre_home"
+                        android:textColor="@color/blue"
+                        android:textSize="20sp"
+                        android:layout_marginEnd="25dp"
+                        android:layout_marginStart="25dp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/condizioniDomani"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/ombre_home"
+                        android:textColor="@color/blue"
+                        android:textSize="20sp"
+                        android:layout_marginEnd="25dp"
+                        android:layout_marginStart="25dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+
+
+
+
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
