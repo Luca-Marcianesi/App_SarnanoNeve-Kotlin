@@ -38,6 +38,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:menu="@menu/bottom_nav_bar" />
 
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="236dp"
+            android:layout_height="121dp"
+            android:layout_marginStart="10dp"
+            android:contentDescription="@string/immaginemeteo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topAppBar"
+            app:srcCompat="@drawable/logo" />
+
         <ScrollView
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -45,42 +55,32 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/topAppBar"
-            app:layout_constraintVertical_bias="0.368">
+            app:layout_constraintTop_toBottomOf="@+id/imageView3">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="236dp"
-                    android:layout_height="121dp"
-                    android:layout_marginStart="10dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/topAppBar"
-                    app:srcCompat="@drawable/logo"
-                    android:contentDescription="@string/immaginemeteo" />
+                Meteo
+
 
                 <androidx.fragment.app.FragmentContainerView
                     android:id="@+id/fragmentContainer_ButtonImpianti"
                     android:name="com.example.myapplication.Ui.Home.ButtonImpianti"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginTop="30dp"
                     android:layout_gravity="end"
-                     />
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="10dp" />
 
                 <androidx.fragment.app.FragmentContainerView
                     android:id="@+id/fragmentContainer_ButtonWebCam"
                     android:name="com.example.myapplication.Ui.Home.ButtonWebCam"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
-                    android:layout_marginTop="30dp"
                     android:layout_marginStart="10dp"
-                     />
+                    android:layout_marginTop="30dp" />
 
 
                 <androidx.fragment.app.FragmentContainerView
@@ -88,21 +88,20 @@
                     android:name="com.example.myapplication.Ui.Home.ButtonPiste"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginTop="30dp"
                     android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="10dp"
 
                     />
 
                 <androidx.fragment.app.FragmentContainerView
-                    android:id="@+id/fragmentContainerView"
-                    android:layout_gravity="center"
+                    android:id="@+id/fragMeteo"
                     android:name="com.example.myapplication.Ui.Home.MeteoFragmentHome"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginTop="50dp"
-                    android:layout_marginBottom="10dp"
-                    />
+                    android:layout_marginBottom="10dp" />
 
 
             </LinearLayout>

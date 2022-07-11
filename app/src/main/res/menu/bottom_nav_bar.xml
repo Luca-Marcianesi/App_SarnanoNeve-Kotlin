@@ -7,15 +7,15 @@
         android:title="@string/text_label_1_botBar"
         />
     <item
-        android:id="@+id/eventi"
-        android:enabled="true"
-        android:icon="@drawable/ic_baseline_calendar_today_24"
-        android:title="@string/text_label_3_botBar"/>
-    <item
-        android:id="@+id/shop"
+        android:id="@+id/meteo"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_wb_sunny_24"
         android:title="@string/meteo"/>
+    <item
+        android:id="@+id/shop"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_shopping_cart_24"
+        android:title="@string/shop"/>
     <item
         android:id="@+id/mappa"
         android:enabled="true"

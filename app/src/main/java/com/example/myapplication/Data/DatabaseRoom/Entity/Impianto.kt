@@ -1,4 +1,4 @@
-package com.example.myapplication.Ui.PisteImpianti.db
+package com.example.myapplication.Data.DatabaseRoom.Entity
 
 import android.util.Log
 import androidx.room.Entity
@@ -30,7 +30,7 @@ data class Impianto(
 
     private fun adattaImmagine(tipo: String): Int {
         return when (tipo) {
-            "skilift" -> R.drawable.skilift2
+            "skilift" -> R.drawable.skilift
             "tapis roulant" -> R.drawable.tapisroulant2
             "seggiovia" -> R.drawable.seggiovia2
             else -> R.drawable.no_results

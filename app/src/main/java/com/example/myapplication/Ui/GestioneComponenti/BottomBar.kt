@@ -1,12 +1,13 @@
-package com.example.myapplication.GestioneComponenti
+package com.example.myapplication.Ui.GestioneComponenti
 
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
-import com.example.myapplication.Eventi.EventiActivity
+import com.example.myapplication.Ui.Shop.ShopActivity
 import com.example.myapplication.MainActivity
 import com.example.myapplication.R
-import com.example.myapplication.Shop.ShopActivity
+import com.example.myapplication.Ui.Meteo.Activity.MeteoActivity
+
 
 class BottomBar() {
 
@@ -16,11 +17,11 @@ class BottomBar() {
                 return Intent(context, MainActivity::class.java)
 
             }
+            R.id.meteo -> {
+                return Intent(context, MeteoActivity::class.java)
+            }
             R.id.shop -> {
                 return Intent(context, ShopActivity::class.java)
-            }
-            R.id.eventi -> {
-                return Intent(context, EventiActivity::class.java)
 
             }
             R.id.mappa -> {

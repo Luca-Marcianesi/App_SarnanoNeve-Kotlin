@@ -1,14 +1,14 @@
 package com.example.myapplication.Data.Repository
 
 import androidx.lifecycle.LiveData
-import com.example.myapplication.Data.Network.Response.CurrentOpenWeatherResponse
 import com.example.myapplication.Data.Network.Interface.WeatherNetDataSource
+import com.example.myapplication.Data.Network.Response.CurrentOpenWeatherResponse
 import com.example.myapplication.Data.Network.Response.FutureWeatherResponse
 import com.example.myapplication.Data.Repository.Interface.Repository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-class RepositoryImpl(
+class MeteoRepositoryImpl(
     private val weatherNetDataSource: WeatherNetDataSource
 
 ) : Repository {

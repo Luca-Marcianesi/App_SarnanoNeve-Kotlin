@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
-import com.example.myapplication.Data.Network.richieste
+import com.example.myapplication.Data.Network.Api.richieste
 import com.example.myapplication.R
 import com.example.myapplication.Ui.Meteo.CurrentWeatherViewModelFactory
 import com.example.myapplication.Ui.Meteo.ScopeFragment.ScopeFragment

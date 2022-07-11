@@ -1,6 +1,9 @@
-package com.example.myapplication.Ui.PisteImpianti.db
+package com.example.myapplication.Data.DatabaseRoom.Dao
 
-import androidx.room.*
+import androidx.room.Dao
+import androidx.room.Query
+import androidx.room.Update
+import com.example.myapplication.Data.DatabaseRoom.Entity.Pista
 
 @Dao
 interface PistaDao {

@@ -1,7 +1,7 @@
 package com.example.myapplication.Data.Network.Response
 
 
-import com.example.myapplication.Data.DataClass.ListDay
+import com.example.myapplication.Data.DataClass.Weather.ListDay
 
 data class FutureWeatherResponse(
 

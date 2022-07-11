@@ -1,10 +1,10 @@
-package com.example.myapplication.Data.Network
+package com.example.myapplication.Data.Network.Api
 
 import com.example.myapplication.Data.Network.Interface.ConnectionInterceptor
 import com.example.myapplication.Data.Network.Response.CurrentOpenWeatherResponse
 import com.example.myapplication.Data.Network.Response.FutureWeatherResponse
-import kotlinx.coroutines.Deferred
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
+import kotlinx.coroutines.Deferred
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit

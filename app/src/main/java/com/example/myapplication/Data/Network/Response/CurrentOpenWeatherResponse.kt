@@ -1,9 +1,9 @@
 package com.example.myapplication.Data.Network.Response
 
-import com.example.myapplication.Data.DataClass.Clouds
-import com.example.myapplication.Data.DataClass.Main
-import com.example.myapplication.Data.DataClass.Weather
-import com.example.myapplication.Data.DataClass.Wind
+import com.example.myapplication.Data.DataClass.Weather.Clouds
+import com.example.myapplication.Data.DataClass.Weather.Main
+import com.example.myapplication.Data.DataClass.Weather.Weather
+import com.example.myapplication.Data.DataClass.Weather.Wind
 
 const val CurrentWheatherId = 0
 

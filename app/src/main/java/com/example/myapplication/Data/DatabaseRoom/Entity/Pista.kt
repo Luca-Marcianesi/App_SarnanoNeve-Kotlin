@@ -1,4 +1,4 @@
-package com.example.myapplication.Ui.PisteImpianti.db
+package com.example.myapplication.Data.DatabaseRoom.Entity
 
 import android.util.Log
 import androidx.room.Entity

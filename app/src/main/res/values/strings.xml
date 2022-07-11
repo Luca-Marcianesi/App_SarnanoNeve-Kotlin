@@ -37,5 +37,12 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="immaginemeteo">ImmagineMeteo</string>
     <string name="meteo">Meteo</string>
+    <string name="shop">Shop</string>
+    <string name="i_nostri_skipass">I NOSTRI SKIPASS</string>
+    <string name="prezzi">Prezzi</string>
+    <string name="feriale">Feriale</string>
+    <string name="festivo">Festivo</string>
+    <string name="normale">Normale</string>
+    <string name="ridotto">Ridotto</string>
 
 </resources>

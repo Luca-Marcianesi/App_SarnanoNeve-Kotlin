@@ -1,4 +1,4 @@
-package com.example.myapplication.Data.DataClass
+package com.example.myapplication.Data.DataClass.Weather
 
 
 data class ListDay(

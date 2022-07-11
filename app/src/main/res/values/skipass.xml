@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="giornaliero">"Giornaliero"</string>
+    <string name="prezzo_normale_feriale_giornaliero">21</string>
+    <string name="prezzo_normale_festivo_giornaliero">26</string>
+    <string name="prezzo_ridotto_feriale_giornaliero">17</string>
+    <string name="prezzo_ridotto_festivo_giornaliero">21</string>
+
+
+    <string name="mattiniero">"Mattiniero"</string>
+    <string name="prezzo_normale_feriale_mattiniero">16</string>
+    <string name="prezzo_normale_festivo_mattiniero">21</string>
+    <string name="prezzo_ridotto_feriale_mattiniero">13</string>
+    <string name="prezzo_ridotto_festivo_mattiniero">17</string>
+
+    <string name="pomeridiano">"Pomeridiano"</string>
+    <string name="prezzo_normale_feriale_pomeridiano">11</string>
+    <string name="prezzo_normale_festivo_pomeridiano">19</string>
+    <string name="prezzo_ridotto_feriale_pomeridiano">9</string>
+    <string name="prezzo_ridotto_festivo_pomeridiano">16</string>
+    <string name="info_pomeridiano">Lo skipass pomeridiano è valido dalle ore 12.30 fino alla chiusura degli impianti</string>
+    <string name="info_mattiniero">Lo skipass mattiniero è valido dall\'apertura degli ampianti alle ore 12:30</string>
+    <string name="info_giornaliero">Lo skipass giornaliero è valido per tutto il giorno e da accesso a tutti gli impianti</string>
+
+
+</resources>

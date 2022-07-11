@@ -1,6 +1,7 @@
 package com.example.myapplication.Ui.PisteImpianti.Adapter
 
 import android.app.Activity
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,7 +9,7 @@ import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.myapplication.R
-import com.example.myapplication.Ui.PisteImpianti.db.Impianto
+import com.example.myapplication.Data.DatabaseRoom.Entity.Impianto
 
 class ListAdapterImpianti(val context: Activity, val list: ArrayList<Impianto>) :
     ArrayAdapter<Impianto>(context, R.layout.layout_item_impianti, list) {
@@ -27,6 +28,8 @@ class ListAdapterImpianti(val context: Activity, val list: ArrayList<Impianto>) 
         image.setImageResource(list[position].immagine)
         nome.text = list[position].nome
         stato.text = list[position].stato_impianto
+        if (list[position].stato_impianto == "aperta") stato.setTextColor(Color.GREEN)
+        else stato.setTextColor(Color.RED)
         numero.text =list[position].numero.toString()
 
         return view

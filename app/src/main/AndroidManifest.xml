@@ -16,10 +16,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
-            android:name=".Shop.ShopActivity"
+            android:name="com.example.myapplication.Ui.Meteo.Activity.MeteoActivity"
             android:exported="false" />
         <activity
-            android:name=".Eventi.EventiActivity"
+            android:name="com.example.myapplication.Ui.Shop.ShopActivity"
             android:exported="false" />
         <activity
             android:name="com.example.myapplication.Ui.WebCam.GestoreWebCam"

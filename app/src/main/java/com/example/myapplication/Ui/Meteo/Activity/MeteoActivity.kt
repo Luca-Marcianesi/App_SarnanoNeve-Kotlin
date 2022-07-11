@@ -1,12 +1,12 @@
-package com.example.myapplication.Shop
+package com.example.myapplication.Ui.Meteo.Activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-
-import com.example.myapplication.GestioneComponenti.BottomBar
+import androidx.appcompat.app.AppCompatActivity
+import com.example.myapplication.Ui.GestioneComponenti.BottomBar
 import com.example.myapplication.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
-class ShopActivity : AppCompatActivity() {
+
+class MeteoActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +21,7 @@ class ShopActivity : AppCompatActivity() {
     private fun setUpBottomBar() {
 
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottomNavigationView)
-        bottomNavigationView.selectedItemId = R.id.shop
+        bottomNavigationView.selectedItemId = R.id.meteo
 
         bottomNavigationView.setOnItemSelectedListener {
             if (bottomNavigationView.selectedItemId == it.itemId) return@setOnItemSelectedListener true

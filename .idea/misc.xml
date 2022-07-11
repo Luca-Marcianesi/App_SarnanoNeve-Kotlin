@@ -26,18 +26,22 @@
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/drawable/ombre_button.xml" value="0.142" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/drawable/ombre_home.xml" value="0.142" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/drawable/pista_nera.xml" value="0.1315" />
-        <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/layout/activity_eventi.xml" value="0.12158054711246201" />
+        <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/layout/activity_eventi.xml" value="0.264" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/layout/activity_informazioni.xml" value="0.16893115942028986" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/layout/activity_main.xml" value="0.21784420289855072" />
+        <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/layout/activity_meteo.xml" value="0.24682971014492755" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/layout/activity_shop.xml" value="0.2015625" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/layout/fragment_buttons.xml" value="0.13043478260869565" />
+        <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/layout/fragment_container_liste.xml" value="0.234375" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/layout/fragment_home.xml" value="0.13043478260869565" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/layout/fragment_meteo.xml" value="0.152" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/layout/fragment_meteo_activity.xml" value="0.20380434782608695" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/layout/fragment_meteo_home.xml" value="0.20380434782608695" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/layout/fragment_piste.xml" value="0.21331521739130435" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/layout/fragment_webcam.xml" value="0.4" />
+        <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/layout/layout_item_impianti.xml" value="0.12158054711246201" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/layout/layout_item_info.xml" value="0.16893115942028986" />
+        <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/layout/layout_item_skipass.xml" value="0.24682971014492755" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/layout/layout_opzione_singola.xml" value="0.16893115942028986" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/layout/layout_schermata_opzioni.xml" value="0.1671875" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/menu/bottom_nav_bar.xml" value="0.1" />
