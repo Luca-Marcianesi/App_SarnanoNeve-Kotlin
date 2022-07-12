@@ -6,7 +6,7 @@ import com.example.myapplication.Data.DatabaseRoom.Entity.Pista
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-class PisteRepository {
+object PisteRepository {
 
     private val pisteDataSource = PisteDataSource()
 

@@ -8,7 +8,7 @@ import com.example.myapplication.Internal.Exception.lazyDeffered
 
 class viewModelImpianti(application: Application) : AndroidViewModel(application) {
 
-    private val impiantiRepository = ImpiantiRepository()
+    private val impiantiRepository = ImpiantiRepository
 
 
     val impiantiSassotetto by lazyDeffered {

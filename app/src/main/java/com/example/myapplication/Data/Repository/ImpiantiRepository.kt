@@ -6,7 +6,7 @@ import com.example.myapplication.Data.DatabaseRoom.Entity.Impianto
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-class ImpiantiRepository {
+object ImpiantiRepository {
 
     private val impiantiDataSource = ImpiantiDataSource()
 

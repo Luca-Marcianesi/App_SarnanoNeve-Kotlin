@@ -7,7 +7,7 @@ import com.example.myapplication.Internal.Exception.lazyDeffered
 
 class viewModelPiste(application: Application) : AndroidViewModel(application) {
 
-    private val pisteRepository = PisteRepository()
+    private val pisteRepository = PisteRepository
 
 
     val pisteSassotetto by lazyDeffered {
