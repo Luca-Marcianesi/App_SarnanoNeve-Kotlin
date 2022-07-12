@@ -24,5 +24,167 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        android:background="@drawable/ombre_home">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Capannina"
+                android:textSize="20sp"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                >
+
+            </TextView>
+
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/capannina"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descrizione capannina"
+                android:textSize="16sp"
+                android:textColor="@color/orange"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Baita1700"
+                android:layout_gravity="end"
+                android:textSize="20sp"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                >
+
+            </TextView>
+
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:scaleType="fitXY"
+                android:layout_gravity="end"
+                android:src="@drawable/baita1700"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descrizione baita"
+                android:textSize="16sp"
+                android:textColor="@color/orange"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sassotetto"
+                android:textSize="20sp"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                >
+
+            </TextView>
+
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/sassotetto"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descrizione sassotetto"
+                android:textSize="16sp"
+                android:textColor="@color/orange"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Scuola scii"
+                android:layout_gravity="end"
+                android:textSize="20sp"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                >
+
+            </TextView>
+
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:scaleType="fitXY"
+                android:layout_gravity="end"
+                android:src="@drawable/scuolascii"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Scuola"
+                android:textSize="16sp"
+                android:textColor="@color/orange"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+        </LinearLayout>
+    </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

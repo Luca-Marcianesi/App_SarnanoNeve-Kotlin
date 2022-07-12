@@ -23,14 +23,12 @@
             android:id="@+id/item_impianti"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@drawable/ic_baseline_downhill_skiing_24"
             android:text="@string/Impianti" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/item_piste"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@drawable/ic_baseline_downhill_skiing_24"
             android:text="@string/Piste" />
 
 

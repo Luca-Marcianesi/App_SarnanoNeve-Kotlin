@@ -27,11 +27,14 @@
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1315" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/drawable/ombre_button.xml" value="0.142" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/drawable/ombre_home.xml" value="0.142" />
+        <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/drawable/open.xml" value="0.1" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/drawable/pista_nera.xml" value="0.1315" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/layout/activity_eventi.xml" value="0.264" />
-        <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/layout/activity_informazioni.xml" value="0.16893115942028986" />
+        <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/layout/activity_info.xml" value="0.1" />
+        <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/layout/activity_informazioni.xml" value="0.136" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/layout/activity_main.xml" value="0.21784420289855072" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/layout/activity_meteo.xml" value="0.24682971014492755" />
+        <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/layout/activity_profilo.xml" value="0.12158054711246201" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/layout/activity_shop.xml" value="0.2015625" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/layout/fragment_buttons.xml" value="0.13043478260869565" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/layout/fragment_container_liste.xml" value="0.234375" />
