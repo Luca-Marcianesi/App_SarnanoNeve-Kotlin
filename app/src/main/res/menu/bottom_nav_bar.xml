@@ -6,6 +6,12 @@
         android:icon="@drawable/ic_baseline_home_24"
         android:title="@string/text_label_1_botBar"
         />
+
+    <item
+        android:id="@+id/impianti"
+        android:enabled="true"
+        android:icon="@drawable/alpine"
+        android:title="@string/Impianti"/>
     <item
         android:id="@+id/meteo"
         android:enabled="true"

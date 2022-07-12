@@ -22,14 +22,13 @@ class ListAdapterImpianti(val context: Activity, val list: ArrayList<Impianto>) 
 
         val image = view.findViewById<ImageView>(R.id.image_impianto)
         val nome = view.findViewById<TextView>(R.id.nome_impianto)
-        val stato = view.findViewById<TextView>(R.id.stato_impianto)
+        val stato = view.findViewById<ImageView>(R.id.stato_impianto)
         val numero = view.findViewById<TextView>(R.id.numero_impianto)
 
         image.setImageResource(list[position].immagine)
         nome.text = list[position].nome
-        stato.text = list[position].stato_impianto
-        if (list[position].stato_impianto == "aperta") stato.setTextColor(Color.GREEN)
-        else stato.setTextColor(Color.RED)
+        stato.setImageResource(list[position].stato_impianto)
+
         numero.text =list[position].numero.toString()
 
         return view

@@ -7,6 +7,7 @@ import com.example.myapplication.Ui.Shop.ShopActivity
 import com.example.myapplication.MainActivity
 import com.example.myapplication.R
 import com.example.myapplication.Ui.Meteo.Activity.MeteoActivity
+import com.example.myapplication.Ui.PisteImpianti.pisteImpiantiActivity
 
 
 class BottomBar() {
@@ -15,6 +16,11 @@ class BottomBar() {
         when (richiesta) {
             R.id.home -> {
                 return Intent(context, MainActivity::class.java)
+
+            }
+
+            R.id.impianti -> {
+                return Intent(context, pisteImpiantiActivity::class.java)
 
             }
             R.id.meteo -> {

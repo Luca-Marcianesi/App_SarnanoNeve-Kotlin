@@ -1,5 +1,6 @@
 package com.example.myapplication.Data.Network.Firestore
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.myapplication.Data.DatabaseRoom.Entity.Pista
@@ -18,6 +19,7 @@ class PisteDataSource {
         downloadPiste()
     }
 
+
     private val _downloadedPisteSassotetto = MutableLiveData<ArrayList<Pista>>()
     val downloadedPisteSassotetto: LiveData<ArrayList<Pista>>
         get() = _downloadedPisteSassotetto
@@ -26,40 +28,41 @@ class PisteDataSource {
     val downloadedPisteMaddalena: LiveData<ArrayList<Pista>>
         get() = _downloadedPisteMaddalena
 
-    fun downloadPiste(){
-        doc_piste_sassotetto.addSnapshotListener{
-                snapshot,e ->
-            if(e != null) {
+
+
+    fun downloadPiste() {
+
+        doc_piste_sassotetto.addSnapshotListener { snapshot, e ->
+            if (e != null) {
                 return@addSnapshotListener
             }
-            if (snapshot != null){
+            if (snapshot != null) {
                 val listaPiste = ArrayList<Pista>()
                 val document = snapshot.documents
-                document.forEach{
+                document.forEach {
                     val pista = it.toObject(Pista::class.java)
 
-                    if (pista != null){
-                        pista.adatta()
-                        listaPiste.add(pista)
-                    }
+                        if (pista != null) {
+                            pista.adatta()
+                            listaPiste.add(pista)
+                        }
                 }
                 _downloadedPisteSassotetto.value = listaPiste
             }
 
         }
 
-        doc_piste_maddalena.addSnapshotListener{
-                snapshot,e ->
-            if(e != null) {
+        doc_piste_maddalena.addSnapshotListener { snapshot, e ->
+            if (e != null) {
                 return@addSnapshotListener
             }
-            if (snapshot != null){
+            if (snapshot != null) {
                 val listaPiste = ArrayList<Pista>()
                 val document = snapshot.documents
-                document.forEach{
+                document.forEach {
                     val pista = it.toObject(Pista::class.java)
 
-                    if (pista != null){
+                    if (pista != null) {
                         pista.adatta()
                         listaPiste.add(pista)
                     }
@@ -68,7 +71,6 @@ class PisteDataSource {
             }
 
         }
-
 
     }
 }

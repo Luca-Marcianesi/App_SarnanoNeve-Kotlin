@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.graphics.green
 import com.example.myapplication.R
 import com.example.myapplication.Data.DatabaseRoom.Entity.Pista
 
@@ -22,14 +23,12 @@ class ListAdapterPiste(val context: Activity, val list: ArrayList<Pista>) :
 
         val image = view.findViewById<ImageView>(R.id.image_difficolta_pista)
         val nome = view.findViewById<TextView>(R.id.nome_pista)
-        val stato = view.findViewById<TextView>(R.id.stato_pista)
+        val stato = view.findViewById<ImageView>(R.id.stato_pista)
         val numero = view.findViewById<TextView>(R.id.numero_pista)
 
         image.setImageResource(list[position].immagine)
         nome.text = list[position].nome
-        stato.text = list[position].stato_pista
-        if (list[position].stato_pista == "aperta") stato.setTextColor(Color.GREEN)
-        else stato.setTextColor(Color.RED)
+        stato.setImageResource(list[position].stato_pista)
         numero.text = list[position].numero.toString()
 
         return view

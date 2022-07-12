@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.Ph"/>
 
 
     <application
@@ -44,44 +45,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Opzioni.AttrezzaturaActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.RUN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity
             android:name=".Opzioni.InformazioniActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.RUN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".Opzioni.SoccorsoPisteActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.RUN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".Opzioni.ParcheggioActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.RUN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".Opzioni.ScuolaSciiActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.RUN" />
@@ -101,15 +67,6 @@
         <activity
             android:name="com.example.myapplication.Ui.PisteImpianti.pisteImpiantiActivity"
             android:exported="false">
-            <intent-filter>
-                <action android:name="android.intent.action.RUN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".schermataOpzioni.SchermataOpzioniActivity"
-            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.RUN" />
 

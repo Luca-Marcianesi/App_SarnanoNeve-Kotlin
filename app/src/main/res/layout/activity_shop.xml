@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ombre_button"
+    android:background="@drawable/ombre"
     tools:context=".Ui.Shop.ShopActivity">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -38,7 +38,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginBottom="30dp"
                 android:gravity="center"
                 android:text="@string/i_nostri_skipass"
@@ -59,9 +59,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="10dp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:background="@drawable/ombre_home">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -69,7 +68,9 @@
                         android:text="@string/giornaliero"
                         android:textColor="@color/blue"
                         android:textSize="20sp"
-                        android:textStyle="bold">
+                        android:textStyle="bold"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp">
 
                     </TextView>
 
@@ -89,7 +90,9 @@
                         android:text="@string/prezzi"
                         android:textColor="@color/blue"
                         android:textSize="20sp"
-                        android:textStyle="bold">
+                        android:textStyle="bold"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp">
 
                     </TextView>
 
@@ -244,8 +247,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ombre_home"
                     android:orientation="vertical">
 
                     <TextView
@@ -254,7 +256,9 @@
                         android:text="@string/mattiniero"
                         android:textColor="@color/blue"
                         android:textSize="20sp"
-                        android:textStyle="bold">
+                        android:textStyle="bold"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp">
 
                     </TextView>
 
@@ -274,7 +278,9 @@
                         android:text="@string/prezzi"
                         android:textColor="@color/blue"
                         android:textSize="20sp"
-                        android:textStyle="bold">
+                        android:textStyle="bold"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp">
 
                     </TextView>
 
@@ -429,8 +435,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ombre_home"
                     android:orientation="vertical">
 
                     <TextView
@@ -439,7 +444,9 @@
                         android:text="@string/pomeridiano"
                         android:textColor="@color/blue"
                         android:textSize="20sp"
-                        android:textStyle="bold">
+                        android:textStyle="bold"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp">
 
                     </TextView>
 
@@ -459,7 +466,9 @@
                         android:text="@string/prezzi"
                         android:textColor="@color/blue"
                         android:textSize="20sp"
-                        android:textStyle="bold">
+                        android:textStyle="bold"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp">
 
                     </TextView>
 

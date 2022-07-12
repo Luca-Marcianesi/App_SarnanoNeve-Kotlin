@@ -44,5 +44,9 @@
     <string name="festivo">Festivo</string>
     <string name="normale">Normale</string>
     <string name="ridotto">Ridotto</string>
+    <string name="time_laps">TIME LAPS</string>
+    <string name="web_cam_capannina">Web Cam Capannina</string>
+    <string name="info_webcam">Questa è la meravigliosa vista che vi aspetta dall nostro rifugio La Capannina. SASSOTETTO(MC) 1420 M</string>
+    <string name="capannina">Capannina</string>
 
 </resources>

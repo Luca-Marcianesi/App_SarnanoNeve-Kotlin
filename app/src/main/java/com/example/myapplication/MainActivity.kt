@@ -43,7 +43,6 @@ class MainActivity : AppCompatActivity() {
             if (bottomNavigationView.selectedItemId == it.itemId) return@setOnItemSelectedListener true
             else {
                 startActivity(BottomBar().getIntent(this, it.itemId))
-                finish()
                 return@setOnItemSelectedListener true
             }
         }

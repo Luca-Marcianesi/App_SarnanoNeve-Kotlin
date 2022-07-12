@@ -14,7 +14,7 @@ data class Impianto(
     val stato: Int = -1,
 ) {
     var immagine: Int = R.drawable.no_results
-    var stato_impianto: String = ""
+    var stato_impianto: Int = R.drawable.no_results
 
     fun adatta() {
         immagine = adattaImmagine(tipo)
@@ -22,17 +22,16 @@ data class Impianto(
 
     }
 
-    private fun adatta_stato(stato: Int): String {
-        Log.w("pista ", stato.toString())
-        return if (stato == 1) "aperta"
-        else "chiusa"
+    private fun adatta_stato(stato: Int): Int {
+        return if (stato == 1) R.drawable.open
+        else R.drawable.close
     }
 
     private fun adattaImmagine(tipo: String): Int {
         return when (tipo) {
-            "skilift" -> R.drawable.skilift
-            "tapis roulant" -> R.drawable.tapisroulant2
-            "seggiovia" -> R.drawable.seggiovia2
+            "skilift" -> R.drawable.skiilift
+            "tapis roulant" -> R.drawable.tapisroulant
+            "seggiovia" -> R.drawable.chairlift
             else -> R.drawable.no_results
         }
     }

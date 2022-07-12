@@ -4,7 +4,9 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.example.myapplication.R
+import com.example.myapplication.Ui.GestioneComponenti.BottomBar
 import com.example.myapplication.Ui.PisteImpianti.Adapter.AdapterTabLayout
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -23,6 +25,8 @@ class pisteImpiantiActivity : AppCompatActivity() {
          viewPager = findViewById(R.id.viewPager)
 
          adapter = AdapterTabLayout(supportFragmentManager, lifecycle,application)
+
+        setUpBottomBar()
 
 
 
@@ -53,6 +57,21 @@ class pisteImpiantiActivity : AppCompatActivity() {
         viewPager.currentItem = position
 
 
+    }
+
+    private fun setUpBottomBar() {
+
+        val bottomBar: BottomNavigationView = findViewById(R.id.bottomNavigationViewListe)
+        bottomBar.selectedItemId = R.id.impianti
+
+        bottomBar.setOnItemSelectedListener {
+
+            if (bottomBar.selectedItemId == it.itemId) return@setOnItemSelectedListener true
+            else {
+                startActivity(BottomBar().getIntent(this, it.itemId))
+                return@setOnItemSelectedListener true
+            }
+        }
     }
 
     override fun onRestart() {

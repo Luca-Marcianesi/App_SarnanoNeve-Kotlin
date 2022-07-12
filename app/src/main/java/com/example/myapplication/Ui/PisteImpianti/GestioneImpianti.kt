@@ -8,10 +8,12 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.R
+import com.example.myapplication.Ui.GestioneComponenti.BottomBar
 import com.example.myapplication.Ui.Meteo.ScopeFragment.ScopeFragment
 import com.example.myapplication.Ui.PisteImpianti.Adapter.ListAdapterImpianti
 import com.example.myapplication.Ui.PisteImpianti.ViewModel.viewModelImpianti
 import com.example.myapplication.databinding.FragmentImpiantiBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.coroutines.launch
 
 
@@ -25,6 +27,7 @@ class GestioneImpianti(var application: Application) : ScopeFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
 
         binding_impianti =
             DataBindingUtil.inflate(inflater, R.layout.fragment_impianti, container, false)
@@ -44,8 +47,8 @@ class GestioneImpianti(var application: Application) : ScopeFragment() {
         return binding_impianti.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         bindUi()
 
@@ -54,18 +57,15 @@ class GestioneImpianti(var application: Application) : ScopeFragment() {
 
     private fun bindUi() = launch {
         val impiantiS = viewModel.impiantiSassotetto.await()
-        impiantiS.observe(viewLifecycleOwner) {impianti ->
+        impiantiS.observe(viewLifecycleOwner) { impianti ->
             binding_impianti.comprensorio1.adapter = ListAdapterImpianti(
                 this@GestioneImpianti.requireActivity(), impianti
             )
             ListHelper.getListViewSize(binding_impianti.comprensorio1)
-
         }
 
-
         val impiantiM = viewModel.impiantiMaddalena.await()
-        impiantiM.observe(viewLifecycleOwner) {
-                impianti ->
+        impiantiM.observe(viewLifecycleOwner) { impianti ->
             binding_impianti.comprensorio2.adapter = ListAdapterImpianti(
                 this@GestioneImpianti.requireActivity(), impianti
             )

@@ -23,4 +23,6 @@ object PisteRepository {
             return@withContext pisteDataSource.downloadedPisteMaddalena
         }
     }
+
+
 }

@@ -18,6 +18,7 @@ class viewModelPiste(application: Application) : AndroidViewModel(application) {
         pisteRepository.getPisteMaddalena()
 
     }
+
 }
 
 

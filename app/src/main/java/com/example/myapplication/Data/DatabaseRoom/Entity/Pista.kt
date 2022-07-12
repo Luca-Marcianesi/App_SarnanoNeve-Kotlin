@@ -14,7 +14,7 @@ data class Pista(
 
     ) {
     var immagine : Int = R.drawable.no_results
-    var stato_pista : String = ""
+    var stato_pista : Int = R.drawable.no_results
 
     fun adatta() {
         immagine = adattaImmagine(difficolta)
@@ -33,10 +33,9 @@ data class Pista(
 
     }
 
-    private fun adatta_stato(stato: Int): String {
-        Log.w("pista ",stato.toString())
-        return if (stato == 1) "aperta"
-        else "chiusa"
+    private fun adatta_stato(stato: Int): Int {
+        return if (stato == 1) R.drawable.open
+        else R.drawable.close
     }
 
 }

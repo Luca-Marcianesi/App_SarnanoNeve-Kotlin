@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ombre_home">
+    >
 
     <ImageView
         android:id="@+id/image_impianto"
@@ -25,20 +25,9 @@
         android:text="TextView"
         android:textColor="@color/blue"
         android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/image_impianto"
         app:layout_constraintStart_toEndOf="@+id/image_impianto"
         app:layout_constraintTop_toTopOf="@+id/image_impianto" />
-
-    <TextView
-        android:id="@+id/stato_impianto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:text="TextView"
-        android:textColor="@color/red"
-        android:textSize="11sp"
-        app:layout_constraintStart_toEndOf="@+id/image_impianto"
-        app:layout_constraintTop_toBottomOf="@+id/nome_impianto" />
 
     <TextView
         android:id="@+id/numero_impianto"
@@ -52,4 +41,14 @@
         app:layout_constraintBottom_toBottomOf="@+id/image_impianto"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/image_impianto" />
+
+    <ImageView
+        android:id="@+id/stato_impianto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/nome_impianto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/nome_impianto"
+        app:srcCompat="@drawable/close" />
 </androidx.constraintlayout.widget.ConstraintLayout>
