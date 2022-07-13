@@ -1,4 +1,4 @@
-package com.example.myapplication.Ui.Meteo
+package com.example.myapplication.Ui.Meteo.ViewModel
 
 import androidx.lifecycle.ViewModel
 import com.example.myapplication.Data.Repository.Interface.Repository

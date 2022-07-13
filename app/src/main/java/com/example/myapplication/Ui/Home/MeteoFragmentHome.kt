@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import com.example.myapplication.R
-import com.example.myapplication.Ui.Meteo.CurrentWeatherViewModelFactory
-import com.example.myapplication.Ui.Meteo.ScopeFragment.ScopeFragment
-import com.example.myapplication.Ui.Meteo.viewModelMeteo
+import com.example.myapplication.Ui.Meteo.ViewModel.CurrentWeatherViewModelFactory
+import com.example.myapplication.Ui.GestioneComponenti.ScopeFragment.ScopeFragment
+import com.example.myapplication.Ui.Meteo.ViewModel.viewModelMeteo
 import com.example.myapplication.databinding.FragmentMeteoHomeBinding
 import kotlinx.coroutines.launch
 import org.kodein.di.KodeinAware
@@ -35,8 +35,8 @@ class MeteoFragmentHome : ScopeFragment(), KodeinAware {
         return bindingMeteo.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProviders.of(this, viewModelFactory).get(viewModelMeteo::class.java)
 
         bindUi()

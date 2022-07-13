@@ -1,20 +1,18 @@
-package com.example.myapplication.Ui.PisteImpianti
+package com.example.myapplication.Ui.PisteImpianti.Fragment
 
 import android.app.Application
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.R
-import com.example.myapplication.Ui.GestioneComponenti.BottomBar
-import com.example.myapplication.Ui.Meteo.ScopeFragment.ScopeFragment
+import com.example.myapplication.Ui.GestioneComponenti.ScopeFragment.ScopeFragment
 import com.example.myapplication.Ui.PisteImpianti.Adapter.ListAdapterPiste
+import com.example.myapplication.Ui.PisteImpianti.ListHelper
 import com.example.myapplication.Ui.PisteImpianti.ViewModel.viewModelPiste
 import com.example.myapplication.databinding.FragmentPisteBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.coroutines.launch
 
 class GestionePiste(var application: Application) : ScopeFragment() {

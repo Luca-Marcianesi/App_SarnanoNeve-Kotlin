@@ -1,4 +1,4 @@
-package com.example.myapplication.Ui.Meteo.ScopeFragment
+package com.example.myapplication.Ui.GestioneComponenti.ScopeFragment
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

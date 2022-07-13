@@ -9,7 +9,7 @@ import com.example.myapplication.Data.Network.Interface.ConnectionInterceptor
 import com.example.myapplication.Data.Network.Interface.WeatherNetDataSource
 import com.example.myapplication.Data.Repository.Interface.Repository
 import com.example.myapplication.Data.Repository.MeteoRepositoryImpl
-import com.example.myapplication.Ui.Meteo.CurrentWeatherViewModelFactory
+import com.example.myapplication.Ui.Meteo.ViewModel.CurrentWeatherViewModelFactory
 import com.jakewharton.threetenabp.AndroidThreeTen
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
@@ -30,7 +30,7 @@ class SaranoApplication : Application(),KodeinAware{
         bind<WeatherNetDataSource>() with singleton { WeatherNetDataSourceImpl(instance()) }
         bind<Repository>() with singleton { MeteoRepositoryImpl(instance()) }
 
-        bind() from provider {CurrentWeatherViewModelFactory(instance())}
+        bind() from provider { CurrentWeatherViewModelFactory(instance()) }
     }
 
     override fun onCreate() {
