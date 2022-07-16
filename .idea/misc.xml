@@ -12,6 +12,7 @@
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/drawable-anydpi/ic_action_name.xml" value="0.1825" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1315" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/drawable-v24/ombre.xml" value="0.1" />
+        <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/drawable/close.xml" value="0.1" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/drawable/custum_button.xml" value="0.1" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/drawable/ic_baseline_access_time_24.xml" value="0.1315" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/drawable/ic_baseline_airline_seat_recline_normal_24.xml" value="0.1315" />
@@ -29,7 +30,11 @@
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/drawable/ombre_button.xml" value="0.142" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/drawable/ombre_home.xml" value="0.142" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/drawable/open.xml" value="0.1" />
+        <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/drawable/pista_blu.xml" value="0.1" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/drawable/pista_nera.xml" value="0.1315" />
+        <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/drawable/pista_rossa.xml" value="0.1" />
+        <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/drawable/star.xml" value="0.1" />
+        <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/drawable/star_check.xml" value="0.1" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/layout/activity_eventi.xml" value="0.264" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/layout/activity_info.xml" value="0.1" />
         <entry key="..\:/Users/luca1/AndroidStudioProjects/App_SarnanoNeve/app/src/main/res/layout/activity_informazioni.xml" value="0.136" />
