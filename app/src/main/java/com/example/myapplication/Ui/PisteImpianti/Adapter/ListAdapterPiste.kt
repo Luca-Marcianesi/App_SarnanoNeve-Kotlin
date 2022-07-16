@@ -1,19 +1,17 @@
 package com.example.myapplication.Ui.PisteImpianti.Adapter
 
 import android.app.Activity
-import android.graphics.Color
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.*
+import android.widget.ArrayAdapter
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.widget.SwitchCompat
-import androidx.core.graphics.green
 import com.example.myapplication.Data.DatabaseRoom.Dao.PreferenzeDao
-import com.example.myapplication.R
 import com.example.myapplication.Data.DatabaseRoom.Entity.Pista
 import com.example.myapplication.Data.DatabaseRoom.Entity.Preferenza
-import com.example.myapplication.Data.DatabaseRoom.SarnanoNeveDB
+import com.example.myapplication.R
 
 class ListAdapterPiste(val context: Activity, val list: List<Pista>,val prefDao : PreferenzeDao) :
     ArrayAdapter<Pista>(context, R.layout.layout_item_piste, list) {

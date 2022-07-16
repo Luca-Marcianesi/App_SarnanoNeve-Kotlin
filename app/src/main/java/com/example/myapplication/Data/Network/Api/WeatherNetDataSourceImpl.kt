@@ -7,8 +7,6 @@ import com.example.myapplication.Data.Network.Interface.WeatherNetDataSource
 import com.example.myapplication.Data.Network.Response.CurrentOpenWeatherResponse
 import com.example.myapplication.Data.Network.Response.FutureWeatherResponse
 import com.example.myapplication.Internal.Exception.NoConnetionException
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
 
 class WeatherNetDataSourceImpl(
     private val apiWeatherService: ApiWeatherService,

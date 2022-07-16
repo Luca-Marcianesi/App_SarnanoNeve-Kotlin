@@ -1,6 +1,5 @@
 package com.example.myapplication.Data.DatabaseRoom.Entity
 
-import android.util.Log
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.example.myapplication.R

@@ -1,13 +1,9 @@
-package com.example.myapplication.Data.DatabaseRoom.Entity
+package com.example.myapplication.Data.DataClass
 
-import android.util.Log
-import androidx.room.Entity
-import androidx.room.PrimaryKey
 import com.example.myapplication.R
 
-@Entity(tableName = "impianto")
+
 data class Impianto(
-    @PrimaryKey
     val numero: Int = -1,
     val nome: String = "",
     val tipo: String = "",

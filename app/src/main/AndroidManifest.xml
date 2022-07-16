@@ -27,7 +27,7 @@
             android:exported="false" />
 
         <activity
-            android:name=".Opzioni.SceltaOpzione"
+            android:name=".Ui.GestioneComponenti.Menu.MenuNavigazione"
             android:exported="true">
 
             <intent-filter>
@@ -37,7 +37,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Opzioni.ProfiloActivity"
+            android:name=".Ui.Profilo.ProfiloActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.RUN" />
@@ -47,7 +47,7 @@
         </activity>
 
         <activity
-            android:name=".Opzioni.InformazioniActivity"
+            android:name=".Ui.Informazioni.InformazioniActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.RUN" />

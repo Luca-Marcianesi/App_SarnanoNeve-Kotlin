@@ -1,12 +1,10 @@
 package com.example.myapplication.Data.Repository
 
-import android.util.Log
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import com.example.myapplication.Data.DatabaseRoom.Dao.PistaDao
 import com.example.myapplication.Data.DatabaseRoom.Dao.PreferenzeDao
-import com.example.myapplication.Data.Network.Firestore.PisteDataSource
 import com.example.myapplication.Data.DatabaseRoom.Entity.Pista
+import com.example.myapplication.Data.Network.Firestore.PisteDataSource
 import kotlinx.coroutines.*
 
 class PisteRepository(

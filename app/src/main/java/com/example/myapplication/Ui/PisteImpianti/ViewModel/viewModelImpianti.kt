@@ -1,14 +1,13 @@
 package com.example.myapplication.Ui.PisteImpianti.ViewModel
 
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.ViewModel
 import com.example.myapplication.Data.Repository.ImpiantiRepository
 import com.example.myapplication.Internal.Exception.lazyDeffered
 
 
-class viewModelImpianti(application: Application) : AndroidViewModel(application) {
+class viewModelImpianti(private val impiantiRepository: ImpiantiRepository) : ViewModel() {
 
-    private val impiantiRepository = ImpiantiRepository
+
 
 
     val impiantiSassotetto by lazyDeffered {

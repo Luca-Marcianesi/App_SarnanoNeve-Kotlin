@@ -1,7 +1,5 @@
 package com.example.myapplication.Ui.PisteImpianti.ViewModel
 
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.ViewModel
 import com.example.myapplication.Data.DatabaseRoom.SarnanoNeveDB
 import com.example.myapplication.Data.Repository.PisteRepository

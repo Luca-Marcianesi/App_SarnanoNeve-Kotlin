@@ -6,7 +6,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentContainerView
 import com.example.myapplication.Ui.GestioneComponenti.BottomBar
-import com.example.myapplication.Opzioni.SceltaOpzione
+import com.example.myapplication.Ui.GestioneComponenti.Menu.MenuNavigazione
 import com.example.myapplication.Ui.Meteo.Activity.MeteoActivity
 import com.example.myapplication.Ui.PisteImpianti.pisteImpiantiActivity
 import com.example.myapplication.Ui.WebCam.GestoreWebCam
@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setUpTopBar() {
         findViewById<MaterialToolbar>(R.id.topAppBar).setNavigationOnClickListener() {
-            val intent = Intent(this, SceltaOpzione::class.java)
+            val intent = Intent(this, MenuNavigazione::class.java)
             startActivity(intent)
         }
     }

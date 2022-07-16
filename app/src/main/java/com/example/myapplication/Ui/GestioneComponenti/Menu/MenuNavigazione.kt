@@ -1,15 +1,18 @@
-package com.example.myapplication.Opzioni
+package com.example.myapplication.Ui.GestioneComponenti.Menu
 
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.view.View
-import android.widget.*
+import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.myapplication.Data.DataClass.OpzioniModel
 import com.example.myapplication.R
+import com.example.myapplication.Ui.Informazioni.InformazioniActivity
+import com.example.myapplication.Ui.Profilo.ProfiloActivity
 import com.google.android.material.appbar.MaterialToolbar
 
-class SceltaOpzione : AppCompatActivity() {
+class MenuNavigazione : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.layout_schermata_opzioni)
@@ -27,7 +30,7 @@ class SceltaOpzione : AppCompatActivity() {
         list.add(OpzioniModel("Informazioni", "Vedi le informazioni generali", R.drawable.info))
         list.add(OpzioniModel("Soccorso piste", "", R.drawable.soccorso))
 
-        listview.adapter = OpzioniAdapter(this, R.layout.layout_opzione_singola, list)
+        listview.adapter = MenuAdapter(this, R.layout.layout_opzione_singola, list)
 
         listview.setOnItemClickListener { parent, view: View, position:Int, id:Long ->
             if(position==0) {

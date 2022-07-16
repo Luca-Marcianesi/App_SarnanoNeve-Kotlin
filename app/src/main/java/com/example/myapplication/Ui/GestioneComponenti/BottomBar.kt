@@ -3,11 +3,11 @@ package com.example.myapplication.Ui.GestioneComponenti
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
-import com.example.myapplication.Ui.Shop.ShopActivity
 import com.example.myapplication.MainActivity
 import com.example.myapplication.R
 import com.example.myapplication.Ui.Meteo.Activity.MeteoActivity
 import com.example.myapplication.Ui.PisteImpianti.pisteImpiantiActivity
+import com.example.myapplication.Ui.Shop.ShopActivity
 
 
 class BottomBar() {

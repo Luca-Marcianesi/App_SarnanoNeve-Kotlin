@@ -8,8 +8,8 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import com.example.myapplication.Data.Network.Api.richieste
 import com.example.myapplication.R
-import com.example.myapplication.Ui.Meteo.ViewModel.CurrentWeatherViewModelFactory
 import com.example.myapplication.Ui.GestioneComponenti.ScopeFragment.ScopeFragment
+import com.example.myapplication.Ui.Meteo.ViewModel.CurrentWeatherViewModelFactory
 import com.example.myapplication.Ui.Meteo.ViewModel.viewModelMeteo
 import com.example.myapplication.databinding.FragmentMeteoActivityBinding
 import kotlinx.coroutines.launch

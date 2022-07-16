@@ -1,8 +1,7 @@
-package com.example.myapplication.Opzioni
+package com.example.myapplication.Ui.Profilo
 
 import android.content.Intent
 import android.graphics.Bitmap
-import android.graphics.Camera
 import android.os.Bundle
 import android.provider.MediaStore
 import android.widget.Button

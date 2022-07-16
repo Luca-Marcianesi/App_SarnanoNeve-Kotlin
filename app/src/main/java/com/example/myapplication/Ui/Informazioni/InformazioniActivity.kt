@@ -1,4 +1,4 @@
-package com.example.myapplication.Opzioni
+package com.example.myapplication.Ui.Informazioni
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

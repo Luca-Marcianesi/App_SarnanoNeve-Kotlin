@@ -2,8 +2,8 @@ package com.example.myapplication.Ui.Shop
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.myapplication.Ui.GestioneComponenti.BottomBar
 import com.example.myapplication.R
+import com.example.myapplication.Ui.GestioneComponenti.BottomBar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class ShopActivity : AppCompatActivity() {

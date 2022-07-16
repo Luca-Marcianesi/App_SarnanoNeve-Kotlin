@@ -1,15 +1,14 @@
 package com.example.myapplication.Ui.PisteImpianti.Adapter
 
 import android.app.Activity
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
+import com.example.myapplication.Data.DataClass.Impianto
 import com.example.myapplication.R
-import com.example.myapplication.Data.DatabaseRoom.Entity.Impianto
 
 class ListAdapterImpianti(val context: Activity, val list: ArrayList<Impianto>) :
     ArrayAdapter<Impianto>(context, R.layout.layout_item_impianti, list) {

@@ -6,15 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.example.myapplication.R
 import com.example.myapplication.Ui.GestioneComponenti.ScopeFragment.ScopeFragment
-import com.example.myapplication.Ui.Meteo.ViewModel.CurrentWeatherViewModelFactory
-import com.example.myapplication.Ui.Meteo.ViewModel.viewModelMeteo
 import com.example.myapplication.Ui.PisteImpianti.Adapter.ListAdapterPiste
 import com.example.myapplication.Ui.PisteImpianti.ListHelper
-import com.example.myapplication.Ui.PisteImpianti.ViewModel.PisteViewModelFactory
+import com.example.myapplication.Ui.PisteImpianti.ViewModel.Factory.PisteViewModelFactory
 import com.example.myapplication.Ui.PisteImpianti.ViewModel.viewModelPiste
 import com.example.myapplication.databinding.FragmentPisteBinding
 import kotlinx.coroutines.launch

@@ -6,20 +6,26 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 import com.example.myapplication.R
 import com.example.myapplication.Ui.GestioneComponenti.ScopeFragment.ScopeFragment
 import com.example.myapplication.Ui.PisteImpianti.Adapter.ListAdapterImpianti
 import com.example.myapplication.Ui.PisteImpianti.ListHelper
+import com.example.myapplication.Ui.PisteImpianti.ViewModel.Factory.ImpantiViewModelFactory
 import com.example.myapplication.Ui.PisteImpianti.ViewModel.viewModelImpianti
 import com.example.myapplication.databinding.FragmentImpiantiBinding
 import kotlinx.coroutines.launch
+import org.kodein.di.KodeinAware
+import org.kodein.di.android.x.closestKodein
+import org.kodein.di.generic.instance
 
 
-class GestioneImpianti(var application: Application) : ScopeFragment() {
+class GestioneImpianti(var application: Application) : ScopeFragment() ,KodeinAware{
 
+    override val kodein by closestKodein()
     lateinit var binding_impianti: FragmentImpiantiBinding
     lateinit var viewModel: viewModelImpianti
+    private val viewModelFactory: ImpantiViewModelFactory by instance()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,10 +37,7 @@ class GestioneImpianti(var application: Application) : ScopeFragment() {
         binding_impianti =
             DataBindingUtil.inflate(inflater, R.layout.fragment_impianti, container, false)
 
-        viewModel = ViewModelProvider(
-            this,
-            ViewModelProvider.AndroidViewModelFactory.getInstance(application)
-        )[viewModelImpianti::class.java]
+        viewModel = ViewModelProviders.of(this, viewModelFactory).get(viewModelImpianti::class.java)
 
 
         binding_impianti.titoloImpianti.text = getString(R.string.InfoImpianti)

@@ -2,7 +2,7 @@ package com.example.myapplication.Data.Network.Firestore
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.myapplication.Data.DatabaseRoom.Entity.Impianto
+import com.example.myapplication.Data.DataClass.Impianto
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
@@ -15,7 +15,7 @@ private val doc_impianti_maddalena = doc_maddalena.collection("Impianti")
 class ImpiantiDataSource {
 
     init {
-        downloadImpianti()
+        setListenerImpianti()
     }
 
     private val _downloadedImpiantiSassotetto = MutableLiveData<ArrayList<Impianto>>()
@@ -27,7 +27,7 @@ class ImpiantiDataSource {
         get() = _downloadedImpiantiMaddalena
 
 
-    fun downloadImpianti() {
+    private fun setListenerImpianti() {
         doc_impianti_sassotetto.addSnapshotListener { snapshot, e ->
             if (e != null) {
                 return@addSnapshotListener

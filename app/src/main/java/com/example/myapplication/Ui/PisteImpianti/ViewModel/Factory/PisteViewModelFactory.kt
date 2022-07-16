@@ -1,11 +1,10 @@
-package com.example.myapplication.Ui.PisteImpianti.ViewModel
+package com.example.myapplication.Ui.PisteImpianti.ViewModel.Factory
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.Data.DatabaseRoom.SarnanoNeveDB
-import com.example.myapplication.Data.Repository.Interface.Repository
 import com.example.myapplication.Data.Repository.PisteRepository
-import com.example.myapplication.Ui.Meteo.ViewModel.viewModelMeteo
+import com.example.myapplication.Ui.PisteImpianti.ViewModel.viewModelPiste
 
 class PisteViewModelFactory(
     private val pisteRepository: PisteRepository,
