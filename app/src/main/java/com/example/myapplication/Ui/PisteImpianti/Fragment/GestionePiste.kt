@@ -7,18 +7,28 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 import com.example.myapplication.R
 import com.example.myapplication.Ui.GestioneComponenti.ScopeFragment.ScopeFragment
+import com.example.myapplication.Ui.Meteo.ViewModel.CurrentWeatherViewModelFactory
+import com.example.myapplication.Ui.Meteo.ViewModel.viewModelMeteo
 import com.example.myapplication.Ui.PisteImpianti.Adapter.ListAdapterPiste
 import com.example.myapplication.Ui.PisteImpianti.ListHelper
+import com.example.myapplication.Ui.PisteImpianti.ViewModel.PisteViewModelFactory
 import com.example.myapplication.Ui.PisteImpianti.ViewModel.viewModelPiste
 import com.example.myapplication.databinding.FragmentPisteBinding
 import kotlinx.coroutines.launch
+import org.kodein.di.KodeinAware
+import org.kodein.di.android.x.closestKodein
+import org.kodein.di.generic.instance
 
-class GestionePiste(var application: Application) : ScopeFragment() {
+class GestionePiste(var application: Application) : ScopeFragment(),KodeinAware {
 
+
+    override val kodein by closestKodein()
     lateinit var binding_piste: FragmentPisteBinding
     lateinit var viewModel: viewModelPiste
+    private val viewModelFactory: PisteViewModelFactory by instance()
 
 
     override fun onCreateView(
@@ -30,10 +40,8 @@ class GestionePiste(var application: Application) : ScopeFragment() {
 
         binding_piste = DataBindingUtil.inflate(inflater, R.layout.fragment_piste, container, false)
 
-        viewModel = ViewModelProvider(
-            this,
-            ViewModelProvider.AndroidViewModelFactory.getInstance(application)
-        ).get(viewModelPiste::class.java)
+        viewModel = ViewModelProviders.of(this, viewModelFactory).get(viewModelPiste::class.java)
+
 
         binding_piste.nomeComprensorio1.text = getString(R.string.sassotetto)
         binding_piste.nomeComprensorio2.text = getString(R.string.maddalena)
@@ -53,7 +61,7 @@ class GestionePiste(var application: Application) : ScopeFragment() {
         val pisteS = viewModel.pisteSassotetto.await()
         pisteS.observe(viewLifecycleOwner) {piste ->
             binding_piste.comprensorio1.adapter = ListAdapterPiste(
-                this@GestionePiste.requireActivity(), piste
+                this@GestionePiste.requireActivity(), piste, viewModel.prefDao
             )
             ListHelper.getListViewSize(binding_piste.comprensorio1)
 
@@ -64,7 +72,7 @@ class GestionePiste(var application: Application) : ScopeFragment() {
         pisteM.observe(viewLifecycleOwner) {
                 piste ->
             binding_piste.comprensorio2.adapter = ListAdapterPiste(
-                this@GestionePiste.requireActivity(), piste
+                this@GestionePiste.requireActivity(), piste ,viewModel.prefDao
             )
             ListHelper.getListViewSize(binding_piste.comprensorio2)
 

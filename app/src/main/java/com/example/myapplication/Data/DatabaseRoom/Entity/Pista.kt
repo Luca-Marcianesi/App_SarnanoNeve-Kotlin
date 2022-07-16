@@ -15,6 +15,7 @@ data class Pista(
     ) {
     var immagine : Int = R.drawable.no_results
     var stato_pista : Int = R.drawable.no_results
+    var preferenza : Boolean = false
 
     fun adatta() {
         immagine = adattaImmagine(difficolta)

@@ -1,6 +1,5 @@
 package com.example.myapplication.Data.Network.Firestore
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.myapplication.Data.DatabaseRoom.Entity.Pista
@@ -16,7 +15,7 @@ private val doc_piste_maddalena = doc_maddalena.collection("Piste")
 class PisteDataSource {
 
     init {
-        downloadPiste()
+        setListenerPiste()
     }
 
 
@@ -30,7 +29,7 @@ class PisteDataSource {
 
 
 
-    fun downloadPiste() {
+    fun setListenerPiste() {
 
         doc_piste_sassotetto.addSnapshotListener { snapshot, e ->
             if (e != null) {

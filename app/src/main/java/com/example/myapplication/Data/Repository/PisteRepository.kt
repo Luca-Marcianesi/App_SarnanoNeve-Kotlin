@@ -1,26 +1,53 @@
 package com.example.myapplication.Data.Repository
 
+import android.util.Log
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import com.example.myapplication.Data.DatabaseRoom.Dao.PistaDao
+import com.example.myapplication.Data.DatabaseRoom.Dao.PreferenzeDao
 import com.example.myapplication.Data.Network.Firestore.PisteDataSource
 import com.example.myapplication.Data.DatabaseRoom.Entity.Pista
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.*
 
-object PisteRepository {
+class PisteRepository(
+    private val pisteDataSource: PisteDataSource,
+    private val pistaDao: PistaDao,
+    private val prefDao: PreferenzeDao
+) {
 
-    private val pisteDataSource = PisteDataSource()
+    init {
+        pisteDataSource.downloadedPisteSassotetto.observeForever { piste ->
+            savePiste(piste)
+        }
 
-     suspend fun getPisteSassotetto(): LiveData<ArrayList<Pista>> {
-        return withContext(Dispatchers.IO) {
-
-            return@withContext pisteDataSource.downloadedPisteSassotetto
+        pisteDataSource.downloadedPisteMaddalena.observeForever { piste ->
+            savePiste(piste)
         }
     }
 
-    suspend fun getPisteMaddalena(): LiveData<ArrayList<Pista>> {
+    @OptIn(DelicateCoroutinesApi::class)
+    private fun savePiste(listaPiste: ArrayList<Pista>) {
+        GlobalScope.launch(Dispatchers.IO) {
+            for (pista in listaPiste) {
+                if (prefDao.getPreferenza(pista.numero)) pista.preferenza = true
+                pistaDao.upsert(pista)
+            }
+        }
+
+    }
+
+    suspend fun getPisteSassotetto(): LiveData<List<Pista>> {
         return withContext(Dispatchers.IO) {
 
-            return@withContext pisteDataSource.downloadedPisteMaddalena
+            return@withContext pistaDao.getAllPisteSassotetto()
+        }
+    }
+
+
+    suspend fun getPisteMaddalena(): LiveData<List<Pista>> {
+        return withContext(Dispatchers.IO) {
+
+            return@withContext pistaDao.getAllPisteMaddalena()
         }
     }
 

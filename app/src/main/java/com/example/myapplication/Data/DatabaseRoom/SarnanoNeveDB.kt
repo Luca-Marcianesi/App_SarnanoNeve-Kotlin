@@ -10,27 +10,29 @@ import com.example.myapplication.Data.DatabaseRoom.Entity.Pista
 import com.example.myapplication.Data.DatabaseRoom.Entity.Preferenza
 
 
-@Database(entities = [Pista::class,Preferenza::class], version=2)
-abstract class SarnanoNeveDB : RoomDatabase(){
+@Database(entities = [Pista::class, Preferenza::class], version = 2)
+abstract class SarnanoNeveDB : RoomDatabase() {
 
-        abstract fun pistaDao(): PistaDao
-        abstract fun preferenzeDao() : PreferenzeDao
+    abstract fun pistaDao(): PistaDao
+    abstract fun preferenzeDao(): PreferenzeDao
 
 
-        companion object {
-            @Volatile
-            private var INSTANCE: SarnanoNeveDB? = null
+    companion object {
+        @Volatile
+        private var INSTANCE: SarnanoNeveDB? = null
 
-            fun getInstance(context: Context): SarnanoNeveDB {
-                return INSTANCE ?: synchronized(this) {
-                    INSTANCE ?: Room.databaseBuilder(
-                        context.applicationContext,
-                        SarnanoNeveDB::class.java, "SarnanoNeve"
-                    ).allowMainThreadQueries()
-                        .fallbackToDestructiveMigration()
-                        .build()
-                }
+        operator fun invoke(context: Context): SarnanoNeveDB {
+            return INSTANCE ?: synchronized(this) {
+                INSTANCE ?: Room.databaseBuilder(
+                    context.applicationContext,
+                    SarnanoNeveDB::class.java, "SarnanoNeve"
+                ).allowMainThreadQueries()
+                    .fallbackToDestructiveMigration()
+                    .build()
             }
         }
 
+
     }
+
+}

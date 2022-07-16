@@ -9,15 +9,16 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.appcompat.widget.SwitchCompat
 import androidx.core.graphics.green
+import com.example.myapplication.Data.DatabaseRoom.Dao.PreferenzeDao
 import com.example.myapplication.R
 import com.example.myapplication.Data.DatabaseRoom.Entity.Pista
 import com.example.myapplication.Data.DatabaseRoom.Entity.Preferenza
 import com.example.myapplication.Data.DatabaseRoom.SarnanoNeveDB
 
-class ListAdapterPiste(val context: Activity, val list: ArrayList<Pista>) :
+class ListAdapterPiste(val context: Activity, val list: List<Pista>,val prefDao : PreferenzeDao) :
     ArrayAdapter<Pista>(context, R.layout.layout_item_piste, list) {
 
-    val prefDao = SarnanoNeveDB.getInstance(context).preferenzeDao()
+
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
 
@@ -40,7 +41,11 @@ class ListAdapterPiste(val context: Activity, val list: ArrayList<Pista>) :
         switch.setOnClickListener {
             prefDao.insertPreference(Preferenza(list[position].numero,switch.isChecked,list[position].nome,list[position].immagine))
 
+
+
         }
+
+
         return view
     }
 
