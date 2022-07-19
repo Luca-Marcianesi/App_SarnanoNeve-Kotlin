@@ -6,17 +6,14 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.myapplication.Data.DatabaseRoom.Dao.AccountDao
 import com.example.myapplication.Data.DatabaseRoom.Dao.PistaDao
-import com.example.myapplication.Data.DatabaseRoom.Dao.PreferenzeDao
 import com.example.myapplication.Data.DatabaseRoom.Entity.Account
 import com.example.myapplication.Data.DatabaseRoom.Entity.Pista
-import com.example.myapplication.Data.DatabaseRoom.Entity.Preferenza
 
 
-@Database(entities = [Pista::class, Preferenza::class,Account::class], version = 3)
+@Database(entities = [Pista::class,Account::class], version = 4)
 abstract class SarnanoNeveDB : RoomDatabase() {
 
     abstract fun pistaDao(): PistaDao
-    abstract fun preferenzeDao(): PreferenzeDao
     abstract fun accountDao() : AccountDao
 
 

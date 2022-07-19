@@ -47,7 +47,7 @@ class SaranoApplication : Application(),KodeinAware{
 
 
         bind() from singleton { PisteDataSource() }
-        bind() from singleton { PisteRepository(instance(),instance(),instance()) }
+        bind() from singleton { PisteRepository(instance(),instance()) }
         bind() from provider { PisteViewModelFactory(instance(),instance()) }
 
         //Impianti
@@ -61,7 +61,6 @@ class SaranoApplication : Application(),KodeinAware{
 
         bind() from singleton { SarnanoNeveDB(instance()) }
         bind() from singleton { instance<SarnanoNeveDB>().pistaDao() }
-        bind() from singleton { instance<SarnanoNeveDB>().preferenzeDao() }
         bind() from singleton { instance<SarnanoNeveDB>().accountDao() }
 
 
