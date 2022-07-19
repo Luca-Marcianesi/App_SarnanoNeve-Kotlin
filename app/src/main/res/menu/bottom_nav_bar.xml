@@ -10,7 +10,7 @@
     <item
         android:id="@+id/impianti"
         android:enabled="true"
-        android:icon="@drawable/alpine"
+        android:icon="@drawable/seggiovia"
         android:title="@string/Impianti"/>
     <item
         android:id="@+id/meteo"
