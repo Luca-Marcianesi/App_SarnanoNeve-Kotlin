@@ -17,7 +17,7 @@ class ConnectionInterceptorImpl(context: Context) : ConnectionInterceptor {
         return chain.proceed(chain.request())
             }
 
-    private fun isOnline(): Boolean {
+     fun isOnline(): Boolean {
         val connetctionManager = appContext.getSystemService(Context.CONNECTIVITY_SERVICE)
         as ConnectivityManager
         val netInfo = connetctionManager.activeNetworkInfo

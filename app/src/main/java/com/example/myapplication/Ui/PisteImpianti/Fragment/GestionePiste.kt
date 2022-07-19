@@ -2,11 +2,14 @@ package com.example.myapplication.Ui.PisteImpianti.Fragment
 
 import android.app.Application
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
+import com.example.myapplication.Data.Network.ConnectionInterceptorImpl
 import com.example.myapplication.R
 import com.example.myapplication.Ui.GestioneComponenti.ScopeFragment.ScopeFragment
 import com.example.myapplication.Ui.PisteImpianti.Adapter.ListAdapterPiste
@@ -39,6 +42,11 @@ class GestionePiste() : ScopeFragment(),KodeinAware {
 
         viewModel = ViewModelProviders.of(this, viewModelFactory)[viewModelPiste::class.java]
 
+        if(!ConnectionInterceptorImpl(requireContext()).isOnline()){
+            Log.e("no","connnessione")
+            Toast.makeText(requireContext(),"No connessione",5000).show()
+
+        }
 
         binding_piste.nomeComprensorio1.text = getString(R.string.sassotetto)
         binding_piste.nomeComprensorio2.text = getString(R.string.maddalena)
@@ -55,25 +63,28 @@ class GestionePiste() : ScopeFragment(),KodeinAware {
     }
 
     private fun bindUi() = launch {
-        val pisteS = viewModel.pisteSassotetto.await()
-        pisteS.observe(viewLifecycleOwner) {piste ->
-            binding_piste.comprensorio1.adapter = ListAdapterPiste(
-                this@GestionePiste.requireActivity(), piste, viewModel.pisteDao
-            )
-            ListHelper.getListViewSize(binding_piste.comprensorio1)
 
+
+
+            val pisteS = viewModel.pisteSassotetto.await()
+            pisteS.observe(viewLifecycleOwner) { piste ->
+                binding_piste.comprensorio1.adapter = ListAdapterPiste(
+                    this@GestionePiste.requireActivity(), piste, viewModel.pisteDao
+                )
+                ListHelper.getListViewSize(binding_piste.comprensorio1)
+
+            }
+
+
+            val pisteM = viewModel.pisteMaddalena.await()
+            pisteM.observe(viewLifecycleOwner) { piste ->
+                binding_piste.comprensorio2.adapter = ListAdapterPiste(
+                    this@GestionePiste.requireActivity(), piste, viewModel.pisteDao
+                )
+                ListHelper.getListViewSize(binding_piste.comprensorio2)
+
+            }
         }
 
-
-        val pisteM = viewModel.pisteMaddalena.await()
-        pisteM.observe(viewLifecycleOwner) {
-                piste ->
-            binding_piste.comprensorio2.adapter = ListAdapterPiste(
-                this@GestionePiste.requireActivity(), piste ,viewModel.pisteDao
-            )
-            ListHelper.getListViewSize(binding_piste.comprensorio2)
-
-        }
 
     }
-}

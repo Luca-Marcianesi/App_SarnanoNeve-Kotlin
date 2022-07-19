@@ -1,8 +1,11 @@
 package com.example.myapplication.Ui.PisteImpianti
 
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
+import com.example.myapplication.Data.Network.ConnectionInterceptorImpl
 import com.example.myapplication.R
 import com.example.myapplication.Ui.GestioneComponenti.BottomBar
 import com.example.myapplication.Ui.PisteImpianti.Adapter.AdapterTabLayout
@@ -25,6 +28,12 @@ class pisteImpiantiActivity : AppCompatActivity() {
          viewPager = findViewById(R.id.viewPager)
 
          adapter = AdapterTabLayout(supportFragmentManager, lifecycle,application)
+
+        if(!ConnectionInterceptorImpl(applicationContext).isOnline()){
+            Toast.makeText(applicationContext,"No connessione",5000).show()
+        }
+
+
 
         setUpBottomBar()
 
