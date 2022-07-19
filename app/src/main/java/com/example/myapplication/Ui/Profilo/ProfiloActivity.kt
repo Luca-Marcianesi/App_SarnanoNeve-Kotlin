@@ -129,16 +129,25 @@ class ProfiloActivity : ScopeActivity(), KodeinAware {
             val account = viewModel.getAccount()
 
             val nome =
-                if (editNome.text.toString() != "" || account != null) editNome.text.toString()
-                else account.nome
+                if (editNome.text.toString() != "") editNome.text.toString()
+                else if (account != null) account.nome
+                else ""
             val cognome =
-                if (editCognome.text.toString() != "" || account != null) editNome.text.toString()
-                else account.cognome
+                if (editCognome.text.toString() != "") editCognome.text.toString()
+                else if (account != null) account.cognome
+                else ""
             val data =
-                if (datapicker.text.toString() != "" || account != null) editNome.text.toString()
-                else account.data_nascita
+                if (datapicker.text.toString() != "") datapicker.text.toString()
+                else if (account != null) account.data_nascita
+                else ""
 
-            viewModel.insertAccount(
+
+            if (nome == "" && cognome == "" && data == "") Toast.makeText(
+                applicationContext,
+                "Informazioni mancanti",
+                1500
+            ).show()
+            else viewModel.insertAccount(
                 Account(
                     nome = nome,
                     cognome = cognome,
@@ -150,7 +159,7 @@ class ProfiloActivity : ScopeActivity(), KodeinAware {
             editCognome.isEnabled = false
             datapicker.isEnabled = false
 
-            Toast.makeText(applicationContext,"Account salvato",1000)
+            Toast.makeText(applicationContext, "Account salvato", 1000)
         }
         bottone_modifica.setOnClickListener {
             bottone_modifica.visibility = View.GONE
