@@ -19,7 +19,7 @@ import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.closestKodein
 import org.kodein.di.generic.instance
 
-class GestionePiste(var application: Application) : ScopeFragment(),KodeinAware {
+class GestionePiste() : ScopeFragment(),KodeinAware {
 
 
     override val kodein by closestKodein()
@@ -37,7 +37,7 @@ class GestionePiste(var application: Application) : ScopeFragment(),KodeinAware 
 
         binding_piste = DataBindingUtil.inflate(inflater, R.layout.fragment_piste, container, false)
 
-        viewModel = ViewModelProviders.of(this, viewModelFactory).get(viewModelPiste::class.java)
+        viewModel = ViewModelProviders.of(this, viewModelFactory)[viewModelPiste::class.java]
 
 
         binding_piste.nomeComprensorio1.text = getString(R.string.sassotetto)
@@ -58,7 +58,7 @@ class GestionePiste(var application: Application) : ScopeFragment(),KodeinAware 
         val pisteS = viewModel.pisteSassotetto.await()
         pisteS.observe(viewLifecycleOwner) {piste ->
             binding_piste.comprensorio1.adapter = ListAdapterPiste(
-                this@GestionePiste.requireActivity(), piste, viewModel.prefDao
+                this@GestionePiste.requireActivity(), piste, viewModel.pisteDao
             )
             ListHelper.getListViewSize(binding_piste.comprensorio1)
 
@@ -69,7 +69,7 @@ class GestionePiste(var application: Application) : ScopeFragment(),KodeinAware 
         pisteM.observe(viewLifecycleOwner) {
                 piste ->
             binding_piste.comprensorio2.adapter = ListAdapterPiste(
-                this@GestionePiste.requireActivity(), piste ,viewModel.prefDao
+                this@GestionePiste.requireActivity(), piste ,viewModel.pisteDao
             )
             ListHelper.getListViewSize(binding_piste.comprensorio2)
 

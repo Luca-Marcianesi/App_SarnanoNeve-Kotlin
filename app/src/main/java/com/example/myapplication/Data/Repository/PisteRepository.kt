@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import com.example.myapplication.Data.DatabaseRoom.Dao.PistaDao
 import com.example.myapplication.Data.DatabaseRoom.Dao.PreferenzeDao
 import com.example.myapplication.Data.DatabaseRoom.Entity.Pista
+import com.example.myapplication.Data.DatabaseRoom.Entity.Preferenza
 import com.example.myapplication.Data.Network.Firestore.PisteDataSource
 import kotlinx.coroutines.*
 
@@ -27,10 +28,19 @@ class PisteRepository(
     private fun savePiste(listaPiste: ArrayList<Pista>) {
         GlobalScope.launch(Dispatchers.IO) {
             for (pista in listaPiste) {
-                if (prefDao.getPreferenza(pista.numero)) pista.preferenza = true
+                if (pistaDao.getPreferenza(pista.numero)) pista.preferenza = true
                 pistaDao.upsert(pista)
             }
         }
+
+    }
+
+    fun getPrefernza(numero:Int): Boolean{
+        return prefDao.getPreferenza(numero)
+    }
+
+    fun setPrefernza(preferenza: Preferenza){
+        prefDao.insertPreference(preferenza)
 
     }
 
@@ -47,6 +57,14 @@ class PisteRepository(
 
             return@withContext pistaDao.getAllPisteMaddalena()
         }
+    }
+
+    suspend fun getPistePreferite(): LiveData<List<Pista>> {
+        return withContext(Dispatchers.IO) {
+
+            return@withContext pistaDao.getPistePreferite()
+        }
+
     }
 
 

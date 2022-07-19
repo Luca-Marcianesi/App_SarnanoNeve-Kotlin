@@ -23,7 +23,7 @@ class AdapterTabLayout(fragManager: FragmentManager, lifecycle: Lifecycle,var ap
                 GestioneImpianti(application)
             }
             1 -> {
-                GestionePiste(application)
+                GestionePiste()
             }
             else -> Fragment()
         }

@@ -8,12 +8,13 @@ import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.widget.SwitchCompat
+import com.example.myapplication.Data.DatabaseRoom.Dao.PistaDao
 import com.example.myapplication.Data.DatabaseRoom.Dao.PreferenzeDao
 import com.example.myapplication.Data.DatabaseRoom.Entity.Pista
 import com.example.myapplication.Data.DatabaseRoom.Entity.Preferenza
 import com.example.myapplication.R
 
-class ListAdapterPiste(val context: Activity, val list: List<Pista>,val prefDao : PreferenzeDao) :
+class ListAdapterPiste(val context: Activity, val list: List<Pista>,val dao: PistaDao) :
     ArrayAdapter<Pista>(context, R.layout.layout_item_piste, list) {
 
 
@@ -30,14 +31,15 @@ class ListAdapterPiste(val context: Activity, val list: List<Pista>,val prefDao 
         val numero = view.findViewById<TextView>(R.id.numero_pista)
         val switch = view.findViewById<SwitchCompat>(R.id.pref)
 
-        switch.isChecked = prefDao.getPreferenza(list[position].numero)
+        switch.isChecked = dao.getPreferenza(list[position].numero)
 
         image.setImageResource(list[position].immagine)
         nome.text = list[position].nome
         stato.setImageResource(list[position].stato_pista)
         numero.text = list[position].numero.toString()
         switch.setOnClickListener {
-            prefDao.insertPreference(Preferenza(list[position].numero,switch.isChecked,list[position].nome,list[position].immagine))
+            list[position].preferenza = switch.isChecked
+            dao.upsert(list[position])
 
 
 

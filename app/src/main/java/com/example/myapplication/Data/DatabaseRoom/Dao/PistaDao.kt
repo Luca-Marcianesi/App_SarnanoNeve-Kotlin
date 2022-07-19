@@ -3,6 +3,7 @@ package com.example.myapplication.Data.DatabaseRoom.Dao
 import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.example.myapplication.Data.DatabaseRoom.Entity.Pista
+import com.example.myapplication.Data.DatabaseRoom.Entity.Preferenza
 
 @Dao
 interface PistaDao {
@@ -19,11 +20,15 @@ interface PistaDao {
     @Query("select * from pista where numero > 4 order by stato desc  ")
     fun getAllPisteMaddalena(): LiveData<List<Pista>>
 
-    @Query("select count(*) from pista where stato > 0")
-    fun getNPisteAperte(): Int
+    @Query("select * from pista where preferenza = :preferenza")
+    fun getPistePreferite(preferenza: Boolean = true): LiveData<List<Pista>>
+
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun upsert(vararg pista: Pista)
+
+    @Query("select preferenza from pista where numero = :numero ")
+    fun getPreferenza(numero : Int) : Boolean
 
     @Update
     fun updateUsers(vararg users: Pista)

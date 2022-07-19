@@ -69,7 +69,7 @@ class SaranoApplication : Application(),KodeinAware{
         //Account
 
         bind() from singleton { AccountRepository(instance()) }
-        bind() from provider { AccountViewModelFactory(instance()) }
+        bind() from provider { AccountViewModelFactory(instance(),instance(),instance()) }
     }
 
     override fun onCreate() {

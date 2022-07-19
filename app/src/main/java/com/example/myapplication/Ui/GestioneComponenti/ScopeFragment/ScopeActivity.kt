@@ -19,7 +19,7 @@ abstract class ScopeActivity:  AppCompatActivity(),CoroutineScope{
             job = Job()
         }
 
-        override fun onDestroy() {
+        public override fun onDestroy() {
             super.onDestroy()
             job.cancel()
         }
