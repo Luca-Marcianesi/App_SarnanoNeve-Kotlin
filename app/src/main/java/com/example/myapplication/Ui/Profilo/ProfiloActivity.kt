@@ -3,12 +3,9 @@ package com.example.myapplication.Ui.Profilo
 import android.app.DatePickerDialog
 import android.content.Context
 import android.os.Bundle
-import android.text.InputType
 import android.view.View
-import android.view.inputmethod.InputMethod
 import android.view.inputmethod.InputMethodManager
 import android.widget.*
-import androidx.core.text.set
 import androidx.lifecycle.ViewModelProviders
 import com.example.myapplication.Data.DatabaseRoom.Entity.Account
 import com.example.myapplication.R
@@ -34,11 +31,10 @@ class ProfiloActivity : ScopeActivity(), KodeinAware {
 
     lateinit var datapicker: EditText
     lateinit var calendar: Calendar
-    lateinit var bottone_salva: Button
-    lateinit var bottone_modifica: Button
+    private lateinit var bottone_salva: Button
+    private lateinit var bottone_modifica: Button
     lateinit var editNome: EditText
     lateinit var editCognome: EditText
-    lateinit var editData: EditText
     lateinit var listPiste: ListView
 
 

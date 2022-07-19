@@ -3,7 +3,6 @@ package com.example.myapplication.Ui.Profilo.VIewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.Data.DatabaseRoom.Dao.PistaDao
-import com.example.myapplication.Data.DatabaseRoom.Dao.PreferenzeDao
 import com.example.myapplication.Data.Repository.AccountRepository
 import com.example.myapplication.Data.Repository.PisteRepository
 

@@ -3,7 +3,6 @@ package com.example.myapplication.Ui.PisteImpianti.ViewModel.Factory
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.Data.DatabaseRoom.Dao.PistaDao
-import com.example.myapplication.Data.DatabaseRoom.SarnanoNeveDB
 import com.example.myapplication.Data.Repository.PisteRepository
 import com.example.myapplication.Ui.PisteImpianti.ViewModel.viewModelPiste
 

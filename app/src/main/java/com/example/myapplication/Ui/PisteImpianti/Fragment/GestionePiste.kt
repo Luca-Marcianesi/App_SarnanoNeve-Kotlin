@@ -1,6 +1,5 @@
 package com.example.myapplication.Ui.PisteImpianti.Fragment
 
-import android.app.Application
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater

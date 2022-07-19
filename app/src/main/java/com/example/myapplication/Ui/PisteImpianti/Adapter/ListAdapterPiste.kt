@@ -9,9 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.widget.SwitchCompat
 import com.example.myapplication.Data.DatabaseRoom.Dao.PistaDao
-import com.example.myapplication.Data.DatabaseRoom.Dao.PreferenzeDao
 import com.example.myapplication.Data.DatabaseRoom.Entity.Pista
-import com.example.myapplication.Data.DatabaseRoom.Entity.Preferenza
 import com.example.myapplication.R
 
 class ListAdapterPiste(val context: Activity, val list: List<Pista>,val dao: PistaDao) :

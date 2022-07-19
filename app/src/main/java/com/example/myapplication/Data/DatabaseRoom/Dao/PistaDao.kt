@@ -3,7 +3,6 @@ package com.example.myapplication.Data.DatabaseRoom.Dao
 import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.example.myapplication.Data.DatabaseRoom.Entity.Pista
-import com.example.myapplication.Data.DatabaseRoom.Entity.Preferenza
 
 @Dao
 interface PistaDao {
