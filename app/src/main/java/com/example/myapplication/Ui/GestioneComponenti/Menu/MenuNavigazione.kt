@@ -28,7 +28,7 @@ class MenuNavigazione : AppCompatActivity() {
         val list = mutableListOf<OpzioniModel>()
         list.add(OpzioniModel("Profilo", "Il tuo profilo", R.drawable.profilo))
         list.add(OpzioniModel("Informazioni", "Vedi le informazioni generali", R.drawable.info))
-        list.add(OpzioniModel("Soccorso piste", "", R.drawable.soccorso))
+        list.add(OpzioniModel("Soccorso piste", "In caso di necessità clicca qui per chiamare aiuto", R.drawable.soccorso))
 
         listview.adapter = MenuAdapter(this, R.layout.layout_opzione_singola, list)
 

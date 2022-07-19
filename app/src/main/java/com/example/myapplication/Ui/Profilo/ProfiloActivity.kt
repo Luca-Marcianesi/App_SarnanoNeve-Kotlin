@@ -1,37 +1,26 @@
 package com.example.myapplication.Ui.Profilo
 
+import android.app.DatePickerDialog
 import android.content.Context
-import android.content.Intent
-import android.graphics.Bitmap
-import android.opengl.Visibility
 import android.os.Bundle
-import android.provider.MediaStore
-import android.util.AttributeSet
 import android.view.View
-import android.view.inputmethod.InputMethod
 import android.view.inputmethod.InputMethodManager
 import android.widget.*
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat.getSystemService
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.myapplication.Data.DatabaseRoom.Entity.Account
 import com.example.myapplication.R
 import com.example.myapplication.Ui.GestioneComponenti.ScopeFragment.ScopeActivity
 import com.example.myapplication.Ui.PisteImpianti.Adapter.ListAdapterPiste
 import com.example.myapplication.Ui.PisteImpianti.ListHelper
-import com.example.myapplication.Ui.PisteImpianti.ViewModel.Factory.PisteViewModelFactory
-import com.example.myapplication.Ui.PisteImpianti.ViewModel.viewModelPiste
 import com.example.myapplication.Ui.Profilo.VIewModel.AccountViewModelFactory
 import com.example.myapplication.Ui.Profilo.VIewModel.viewModelAccount
-import com.example.myapplication.databinding.FragmentPisteBinding
 import com.google.android.material.appbar.MaterialToolbar
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.closestKodein
 import org.kodein.di.generic.instance
+import java.text.SimpleDateFormat
+import java.util.*
 
 class ProfiloActivity : ScopeActivity(), KodeinAware {
 
@@ -40,6 +29,8 @@ class ProfiloActivity : ScopeActivity(), KodeinAware {
     private val viewModelFactory: AccountViewModelFactory by instance()
 
 
+    lateinit var datapicker: EditText
+    lateinit var calendar: Calendar
     lateinit var bottone_salva: Button
     lateinit var bottone_modifica: Button
     lateinit var editNome: EditText
@@ -60,15 +51,38 @@ class ProfiloActivity : ScopeActivity(), KodeinAware {
             finish()
         }
 
+        datapicker = findViewById<EditText>(R.id.compleanno)
         editNome = findViewById<EditText>(R.id.editNome)
         editCognome = findViewById<EditText>(R.id.editNome)
         editData = findViewById<EditText>(R.id.editNome)
         listPiste = findViewById(R.id.listaPiste)
-
-
+        calendar = Calendar.getInstance()
 
         bottone_salva = findViewById(R.id.salva)
         bottone_modifica = findViewById(R.id.modifica)
+
+        val dateSetListener = object : DatePickerDialog.OnDateSetListener {
+            override fun onDateSet(view: DatePicker, year: Int, month: Int, dayOfMonth: Int) {
+                calendar.set(Calendar.YEAR, year)
+                calendar.set(Calendar.MONTH, month)
+                calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth)
+
+                updateCalendar()
+            }
+
+            private fun updateCalendar() {
+                val Format: String = "MM/dd/yy"
+                val sdf = SimpleDateFormat(Format, Locale.ITALY)
+
+                datapicker.setText(sdf.format(calendar.getTime()))
+            }
+        }
+
+        datapicker.setOnClickListener {
+                DatePickerDialog(this@ProfiloActivity, dateSetListener, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH),
+                calendar.get(Calendar.DAY_OF_MONTH)).show()
+        }
+
 
         setUpButtom()
         setUpCampi()

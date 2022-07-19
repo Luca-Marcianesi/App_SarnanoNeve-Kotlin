@@ -58,12 +58,12 @@
 
             <EditText
                 android:id="@+id/editNome"
-                android:layout_width="150dp"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="20dp"
                 android:inputType="text"
-                android:textColor="@color/orange">
+                android:hint="Inserisci il tuo nome">
 
             </EditText>
 
@@ -78,21 +78,39 @@
 
             <EditText
                 android:id="@+id/editCognome"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="20dp">
-
-            </EditText>
-
-            <CalendarView
-                android:id="@+id/calendario"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginBottom="20dp">
+                android:layout_marginBottom="20dp"
+                android:inputType="text"
+                android:hint="Inserisci il tuo cognome">
 
-            </CalendarView>
+            </EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:text="Data di nascita"
+                >
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/compleanno"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:hint="Clicca per selezionare"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:datePickerMode="spinner">
+
+            </EditText>
 
 
             <Button
