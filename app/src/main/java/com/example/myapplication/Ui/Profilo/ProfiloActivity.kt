@@ -98,7 +98,7 @@ class ProfiloActivity : ScopeActivity(), KodeinAware {
         val piste = viewModel.pistePreferite.await()
         piste.observe(this@ProfiloActivity) { listaPiste ->
             listPiste.adapter = ListAdapterPiste(
-                this@ProfiloActivity, listaPiste, viewModel.pisteDao
+                this@ProfiloActivity, listaPiste, viewModel
             )
             ListHelper.getListViewSize(listPiste)
         }
@@ -143,19 +143,23 @@ class ProfiloActivity : ScopeActivity(), KodeinAware {
                 "Informazioni mancanti",
                 1500
             ).show()
-            else viewModel.insertAccount(
-                Account(
-                    nome = nome,
-                    cognome = cognome,
-                    data_nascita = data
-                )
-            )
+            else {
+                viewModel.insertAccount(
+                    Account(
+                        nome = nome,
+                        cognome = cognome,
+                        data_nascita = data
+                    )
 
+                )
+                Toast.makeText(applicationContext, "Account salvato", 2000).show()
+
+
+
+            }
             editNome.isEnabled = false
             editCognome.isEnabled = false
             datapicker.isEnabled = false
-
-            Toast.makeText(applicationContext, "Account salvato", 1000)
         }
         bottone_modifica.setOnClickListener {
             bottone_modifica.visibility = View.GONE

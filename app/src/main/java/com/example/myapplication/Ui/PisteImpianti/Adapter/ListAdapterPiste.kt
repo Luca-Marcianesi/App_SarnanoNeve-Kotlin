@@ -11,8 +11,10 @@ import androidx.appcompat.widget.SwitchCompat
 import com.example.myapplication.Data.DatabaseRoom.Dao.PistaDao
 import com.example.myapplication.Data.DatabaseRoom.Entity.Pista
 import com.example.myapplication.R
+import com.example.myapplication.Ui.GestioneComponenti.vMPisteInteface
+import com.example.myapplication.Ui.PisteImpianti.ViewModel.viewModelPiste
 
-class ListAdapterPiste(val context: Activity, val list: List<Pista>,val dao: PistaDao) :
+class ListAdapterPiste(val context: Activity, val list: List<Pista>,val viewModel: vMPisteInteface) :
     ArrayAdapter<Pista>(context, R.layout.layout_item_piste, list) {
 
 
@@ -29,7 +31,7 @@ class ListAdapterPiste(val context: Activity, val list: List<Pista>,val dao: Pis
         val numero = view.findViewById<TextView>(R.id.numero_pista)
         val switch = view.findViewById<SwitchCompat>(R.id.pref)
 
-        switch.isChecked = dao.getPreferenza(list[position].numero)
+        switch.isChecked = viewModel.getPreferenza(list[position].numero)
 
         image.setImageResource(list[position].immagine)
         nome.text = list[position].nome
@@ -37,7 +39,7 @@ class ListAdapterPiste(val context: Activity, val list: List<Pista>,val dao: Pis
         numero.text = list[position].numero.toString()
         switch.setOnClickListener {
             list[position].preferenza = switch.isChecked
-            dao.upsert(list[position])
+            viewModel.aggiornaPista(list[position])
 
 
 

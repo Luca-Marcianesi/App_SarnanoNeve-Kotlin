@@ -52,7 +52,9 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="Nome">
+                android:text="Nome"
+                android:textColor="@color/orange"
+                android:textStyle="italic">
 
             </TextView>
 
@@ -73,7 +75,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="20dp"
-                android:text="Cognome">
+                android:text="Cognome"
+                android:textColor="@color/orange"
+                android:textStyle="italic">
 
             </TextView>
 
@@ -94,6 +98,8 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="20dp"
                 android:text="Data di nascita"
+                android:textColor="@color/orange"
+                android:textStyle="italic"
                 >
 
             </TextView>
@@ -140,7 +146,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="20dp"
-                android:text="Lista Piste Preferite">
+                android:text="Lista Piste Preferite"
+                android:textColor="@color/orange"
+                android:textStyle="bold">
 
             </TextView>
 

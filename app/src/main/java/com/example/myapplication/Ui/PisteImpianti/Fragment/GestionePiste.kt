@@ -68,7 +68,7 @@ class GestionePiste() : ScopeFragment(),KodeinAware {
             val pisteS = viewModel.pisteSassotetto.await()
             pisteS.observe(viewLifecycleOwner) { piste ->
                 binding_piste.comprensorio1.adapter = ListAdapterPiste(
-                    this@GestionePiste.requireActivity(), piste, viewModel.pisteDao
+                    this@GestionePiste.requireActivity(), piste, viewModel
                 )
                 ListHelper.getListViewSize(binding_piste.comprensorio1)
 
@@ -78,7 +78,7 @@ class GestionePiste() : ScopeFragment(),KodeinAware {
             val pisteM = viewModel.pisteMaddalena.await()
             pisteM.observe(viewLifecycleOwner) { piste ->
                 binding_piste.comprensorio2.adapter = ListAdapterPiste(
-                    this@GestionePiste.requireActivity(), piste, viewModel.pisteDao
+                    this@GestionePiste.requireActivity(), piste, viewModel
                 )
                 ListHelper.getListViewSize(binding_piste.comprensorio2)
 
