@@ -10,7 +10,7 @@ import com.example.myapplication.Data.DatabaseRoom.Entity.Account
 import com.example.myapplication.Data.DatabaseRoom.Entity.Pista
 
 
-@Database(entities = [Pista::class,Account::class], version = 4)
+@Database(entities = [Pista::class,Account::class], version = 5)
 abstract class SarnanoNeveDB : RoomDatabase() {
 
     abstract fun pistaDao(): PistaDao
