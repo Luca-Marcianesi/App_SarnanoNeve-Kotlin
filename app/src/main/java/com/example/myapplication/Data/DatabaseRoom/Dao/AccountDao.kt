@@ -1,9 +1,6 @@
 package com.example.myapplication.Data.DatabaseRoom.Dao
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import com.example.myapplication.Data.DatabaseRoom.Entity.Account
 
 @Dao
@@ -15,4 +12,9 @@ interface AccountDao {
     @Query("select * from account where id = 0")
     fun getAccount() : Account
 
+    @Update
+    fun nome(nome : String, account: Account) {
+        val utente : Account = account
+        utente.nome = nome
+    }
 }

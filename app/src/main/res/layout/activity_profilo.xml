@@ -52,9 +52,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="Nome"
-                android:textColor="@color/orange"
-                android:textStyle="italic">
+                android:text="Nome">
 
             </TextView>
 
@@ -75,9 +73,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="20dp"
-                android:text="Cognome"
-                android:textColor="@color/orange"
-                android:textStyle="italic">
+                android:text="Cognome">
 
             </TextView>
 
@@ -98,8 +94,6 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="20dp"
                 android:text="Data di nascita"
-                android:textColor="@color/orange"
-                android:textStyle="italic"
                 >
 
             </TextView>
@@ -114,8 +108,7 @@
                 android:clickable="false"
                 android:cursorVisible="false"
                 android:focusable="false"
-                android:focusableInTouchMode="false"
-                android:datePickerMode="spinner">
+                android:focusableInTouchMode="false">
 
             </EditText>
 
@@ -146,9 +139,20 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="20dp"
-                android:text="Lista Piste Preferite"
-                android:textColor="@color/orange"
-                android:textStyle="bold">
+                android:layout_marginTop="20dp"
+                android:text="Lista Piste Preferite">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/pistePreferite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Attualmente non hai nessuna pista tra le tue preferenze">
+
+
 
             </TextView>
 
